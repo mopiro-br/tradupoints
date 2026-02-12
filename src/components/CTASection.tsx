@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const CTASection = () => {
   return (
@@ -20,16 +21,18 @@ const CTASection = () => {
             Vamos Conversar
           </p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-6">
-            Seu próximo evento merece{" "}
-            <span className="text-gradient-gold">excelência</span>
+            Seu próximo evento merece uma{" "}
+            <span className="text-gradient-gold">parceira estratégica</span>
           </h2>
           <p className="font-body text-muted/60 text-lg leading-relaxed mb-10">
-            Entre em contato para discutir as necessidades do seu evento. Nossa
-            equipe está pronta para garantir uma comunicação impecável.
+            Facilitamos seu foco no conteúdo e na experiência dos participantes 
+            enquanto cuidamos de cada detalhe da comunicação multilíngue com 
+            expertise técnica e preparo profundo.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="gold" size="lg" className="text-base px-12">
               Solicitar Orçamento
+              <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
             <Button variant="gold-outline" size="lg" className="text-base px-12">
               Fale Conosco

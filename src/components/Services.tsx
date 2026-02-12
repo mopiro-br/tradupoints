@@ -1,43 +1,49 @@
 import { motion } from "framer-motion";
-import { Languages, FileText, Headphones, Music, Mic2, Radio, GraduationCap, ArrowRight } from "lucide-react";
+import { Languages, FileText, Headphones, Music, Mic2, Radio, GraduationCap, Smartphone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const otherServices = [
   {
     icon: FileText,
-    title: "Tradução Escrita",
+    title: "Tradução Escrita Especializada",
     description:
-      "Tradução técnica e especializada de documentos médicos, científicos e corporativos com rigor terminológico.",
+      "Tradução técnica de documentos médicos, científicos e corporativos com rigor terminológico e revisão criteriosa.",
   },
   {
     icon: Headphones,
     title: "Transcrição Audiovisual",
     description:
-      "Transcrição profissional de materiais audiovisuais com fidelidade absoluta ao conteúdo original.",
+      "Transcrição profissional com fidelidade absoluta ao conteúdo original, preservando nuances técnicas e contextuais.",
+  },
+  {
+    icon: Smartphone,
+    title: "Tecnologia BYOD",
+    description:
+      "Sistema inovador que substitui receptores tradicionais: discreto, sustentável e sem filas. Modernidade integrada à tradição da interpretação.",
   },
   {
     icon: Music,
     title: "Sonorização & DJ",
     description:
-      "Sonorização de alto padrão para eventos corporativos, festas empresariais e celebrações exclusivas.",
+      "Sonorização de alto padrão para eventos corporativos e celebrações exclusivas, com equipamentos de última geração.",
   },
   {
     icon: Mic2,
     title: "Mestre de Cerimônia",
     description:
-      "Condução sofisticada de eventos com elegância, pontualidade e domínio de palco impecável.",
+      "Condução sofisticada de eventos com elegância, pontualidade e domínio de palco para experiências memoráveis.",
   },
   {
     icon: Radio,
     title: "Palestra Silenciosa",
     description:
-      "Equipamentos de transmissão de última geração — tecnologia e discrição para seu evento.",
+      "Equipamentos de transmissão de última geração — tecnologia e discrição que elevam a experiência do participante.",
   },
   {
     icon: GraduationCap,
     title: "Mentoria para Intérpretes",
     description:
-      "Programa exclusivo de formação para intérpretes que desejam atuar em eventos de alta complexidade.",
+      "Programa exclusivo de formação para intérpretes que desejam dominar eventos médicos, científicos e técnicos de alta complexidade.",
   },
 ];
 
@@ -64,8 +70,8 @@ const Services = () => {
             Nossos Serviços
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-            Soluções sob medida para{" "}
-            <span className="text-gradient-gold">cada evento</span>
+            Expertise que vai além da{" "}
+            <span className="text-gradient-gold">tradução literal</span>
           </h2>
         </motion.div>
 
@@ -89,15 +95,21 @@ const Services = () => {
                 </span>
               </div>
               <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-background mb-4 leading-tight">
-                Tradução Simultânea
+                Tradução Simultânea Premium
               </h3>
               <p className="font-body text-muted/70 leading-relaxed mb-6 max-w-lg">
-                Interpretação de conferência para simpósios, congressos científicos, 
-                treinamentos internacionais e lançamentos de produtos. Precisão 
-                absoluta em terminologia médica e técnica de alta complexidade.
+                Não apenas traduzimos palavras: facilitamos diálogos estratégicos, 
+                conectamos pessoas e ideias, transformando complexidade em clareza 
+                e confiança. Preparação meticulosa com estudo prévio de conteúdos 
+                e glossários técnicos personalizados.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Congressos médicos e científicos", "Treinamentos internacionais", "Eventos farmacêuticos e lançamentos", "Equipamentos profissionais inclusos"].map((item) => (
+                {[
+                  "Congressos médicos e científicos de alta complexidade",
+                  "Roadshows de investidores e eventos corporativos",
+                  "Simpósios, treinamentos internacionais e lançamentos",
+                  "Glossários proprietários e preparo técnico dedicado",
+                ].map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
                     <span className="font-body text-sm text-background/80">{item}</span>
@@ -105,7 +117,7 @@ const Services = () => {
                 ))}
               </ul>
               <Button variant="gold" size="lg" className="text-base">
-                Solicitar Orçamento
+                Fale Com Nossa Equipe
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
             </div>
@@ -133,7 +145,7 @@ const Services = () => {
           className="text-center mb-10"
         >
           <p className="font-body text-sm text-muted-foreground tracking-wide">
-            Conheça também nossas outras soluções
+            Soluções complementares que elevam a experiência do seu evento
           </p>
         </motion.div>
 

@@ -9,8 +9,8 @@ const Footer = () => {
           <div className="md:col-span-1">
             <img src={logoHorizontal} alt="Tradupoints" className="h-7 mb-4" />
             <p className="font-body text-sm text-muted/50 leading-relaxed">
-              Tradução simultânea de excelência para eventos médicos,
-              científicos e técnicos.
+              Parceira estratégica em tradução simultânea para eventos médicos,
+              científicos e técnicos de alta complexidade.
             </p>
           </div>
 
@@ -24,8 +24,9 @@ const Footer = () => {
                 "Tradução Simultânea",
                 "Tradução Escrita",
                 "Transcrição",
-                "Sonorização",
-                "Palestra Silenciosa",
+                "Tecnologia BYOD",
+                "Sonorização & DJ",
+                "Mentoria para Intérpretes",
               ].map((s) => (
                 <li key={s}>
                   <a
@@ -45,7 +46,7 @@ const Footer = () => {
               Conteúdo
             </h4>
             <ul className="space-y-2">
-              {["Blog", "Podcast", "Mentoria para Intérpretes"].map((s) => (
+              {["Blog", "Podcast"].map((s) => (
                 <li key={s}>
                   <a
                     href="#blog"
