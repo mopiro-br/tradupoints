@@ -9,11 +9,14 @@ const navItems = [
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Blog", href: "#blog" },
-  { label: "Mentoria", href: "#mentoria" },
   { label: "Contato", href: "#contato" },
 ];
 
-const Navbar = () => {
+interface NavbarProps {
+  onRequestQuote: () => void;
+}
+
+const Navbar = ({ onRequestQuote }: NavbarProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -23,7 +26,6 @@ const Navbar = () => {
           <img src={logoHorizontal} alt="Tradupoints" className="h-8" />
         </a>
 
-        {/* Desktop */}
         <ul className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <li key={item.href}>
@@ -38,12 +40,11 @@ const Navbar = () => {
         </ul>
 
         <div className="hidden lg:block">
-          <Button variant="gold" size="sm">
+          <Button variant="gold" size="sm" onClick={onRequestQuote}>
             Solicitar Orçamento
           </Button>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
           className="lg:hidden text-gold"
@@ -53,7 +54,6 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -75,7 +75,7 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-                <Button variant="gold" size="sm" className="w-full mt-2">
+                <Button variant="gold" size="sm" className="w-full mt-2" onClick={() => { setOpen(false); onRequestQuote(); }}>
                   Solicitar Orçamento
                 </Button>
               </li>

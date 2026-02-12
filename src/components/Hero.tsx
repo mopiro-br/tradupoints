@@ -1,23 +1,21 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { getWhatsAppUrl } from "@/components/WhatsAppButton";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const Hero = () => {
+interface HeroProps {
+  onRequestQuote: () => void;
+}
+
+const Hero = ({ onRequestQuote }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt=""
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
+        <img src={heroBg} alt="" className="w-full h-full object-cover" loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/90 to-navy/75" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12 pt-20">
         <div className="max-w-3xl">
           <motion.p
@@ -45,8 +43,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl text-muted/70 font-body font-light max-w-2xl mb-10 leading-relaxed"
           >
-            Transformamos desafios multilíngues em comunicação clara, precisa e 
-            contextualizada — para que você se concentre no conteúdo e na 
+            Transformamos desafios multilíngues em comunicação clara, precisa e
+            contextualizada — para que você se concentre no conteúdo e na
             experiência do seu evento.
           </motion.p>
 
@@ -56,18 +54,24 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.45 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Button variant="gold" size="lg" className="text-base px-10">
+            <Button variant="gold" size="lg" className="text-base px-10" onClick={onRequestQuote}>
               Solicitar Orçamento
               <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
-            <Button variant="gold-outline" size="lg" className="text-base px-10">
-              Conheça Nossos Serviços
+            <Button
+              variant="gold-outline"
+              size="lg"
+              className="text-base px-10"
+              asChild
+            >
+              <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
+                Fale Conosco
+              </a>
             </Button>
           </motion.div>
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );

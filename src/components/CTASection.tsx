@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { getWhatsAppUrl } from "@/components/WhatsAppButton";
 
-const CTASection = () => {
+interface CTASectionProps {
+  onRequestQuote: () => void;
+}
+
+const CTASection = ({ onRequestQuote }: CTASectionProps) => {
   return (
     <section id="contato" className="section-padding bg-navy relative overflow-hidden">
-      {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-red-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
@@ -25,17 +29,19 @@ const CTASection = () => {
             <span className="text-gradient-gold">parceira estratégica</span>
           </h2>
           <p className="font-body text-muted/60 text-lg leading-relaxed mb-10">
-            Facilitamos seu foco no conteúdo e na experiência dos participantes 
-            enquanto cuidamos de cada detalhe da comunicação multilíngue com 
+            Facilitamos seu foco no conteúdo e na experiência dos participantes
+            enquanto cuidamos de cada detalhe da comunicação multilíngue com
             expertise técnica e preparo profundo.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="gold" size="lg" className="text-base px-12">
+            <Button variant="gold" size="lg" className="text-base px-12" onClick={onRequestQuote}>
               Solicitar Orçamento
               <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
-            <Button variant="gold-outline" size="lg" className="text-base px-12">
-              Fale Conosco
+            <Button variant="gold-outline" size="lg" className="text-base px-12" asChild>
+              <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
+                Fale Conosco
+              </a>
             </Button>
           </div>
         </motion.div>
