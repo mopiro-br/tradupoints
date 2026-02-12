@@ -1,5 +1,58 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Star } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+
+const useCountUp = (end: number, duration = 2000, startCounting: boolean) => {
+  const [count, setCount] = useState(0);
+  
+  useEffect(() => {
+    if (!startCounting) return;
+    let startTime: number | null = null;
+    let animationFrame: number;
+    
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+      setCount(Math.floor(eased * end));
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+    
+    animationFrame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrame);
+  }, [end, duration, startCounting]);
+  
+  return count;
+};
+
+const StatItem = ({ stat, delay }: { stat: { value: string; label: string }; delay: number }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  
+  const numericValue = parseInt(stat.value.replace(/\D/g, ""));
+  const suffix = stat.value.replace(/[0-9]/g, "");
+  const count = useCountUp(numericValue, 2000, isInView);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: delay * 0.1, duration: 0.4 }}
+      className="text-center"
+    >
+      <p className="font-display text-4xl md:text-5xl font-bold text-red-accent mb-2">
+        {isInView ? count : 0}{suffix}
+      </p>
+      <p className="font-body text-sm text-muted-foreground">
+        {stat.label}
+      </p>
+    </motion.div>
+  );
+};
 
 const testimonials = [
   {
@@ -57,21 +110,7 @@ const SocialProof = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.4 }}
-              className="text-center"
-            >
-              <p className="font-display text-4xl md:text-5xl font-bold text-red-accent mb-2">
-                {stat.value}
-              </p>
-              <p className="font-body text-sm text-muted-foreground">
-                {stat.label}
-              </p>
-            </motion.div>
+            <StatItem key={stat.label} stat={stat} delay={i} />
           ))}
         </div>
 
