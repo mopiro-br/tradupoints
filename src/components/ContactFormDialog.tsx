@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Send, CheckCircle } from "lucide-react";
+import { X, Send, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -35,6 +36,8 @@ const ContactFormDialog = ({ open, onClose }: ContactFormDialogProps) => {
   });
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleChange = (field: keyof ContactForm, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -43,8 +46,9 @@ const ContactFormDialog = ({ open, onClose }: ContactFormDialogProps) => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError(null);
     const result = contactSchema.safeParse(form);
     if (!result.success) {
       const fieldErrors: Partial<Record<keyof ContactForm, string>> = {};
@@ -55,7 +59,20 @@ const ContactFormDialog = ({ open, onClose }: ContactFormDialogProps) => {
       setErrors(fieldErrors);
       return;
     }
-    setSubmitted(true);
+
+    setLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-quote-request", {
+        body: result.data,
+      });
+      if (error) throw error;
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Error sending quote request:", err);
+      setSubmitError("Não foi possível enviar sua solicitação. Tente novamente ou entre em contato pelo WhatsApp.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleClose = () => {
@@ -259,9 +276,22 @@ const ContactFormDialog = ({ open, onClose }: ContactFormDialogProps) => {
                     />
                   </div>
 
-                  <Button variant="gold" size="lg" className="w-full text-base" type="submit">
-                    Enviar Solicitação
-                    <Send className="w-4 h-4 ml-1" />
+                  {submitError && (
+                    <p className="text-sm text-red-accent text-center">{submitError}</p>
+                  )}
+
+                  <Button variant="gold" size="lg" className="w-full text-base" type="submit" disabled={loading}>
+                    {loading ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-1 animate-spin" />
+                        Enviando...
+                      </>
+                    ) : (
+                      <>
+                        Enviar Solicitação
+                        <Send className="w-4 h-4 ml-1" />
+                      </>
+                    )}
                   </Button>
                 </form>
               )}
