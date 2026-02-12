@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <img src={logoHorizontal} alt="Tradupoints" className="h-7 mb-4 mix-blend-screen" />
+            <img src={logoHorizontal} alt="Tradupoints" className="h-7 mb-4 mix-blend-screen brightness-200" />
             <p className="font-body text-sm text-muted/50 leading-relaxed">
               Parceira estratégica em tradução simultânea para eventos médicos,
               científicos e técnicos de alta complexidade.
