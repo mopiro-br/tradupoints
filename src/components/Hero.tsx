@@ -22,9 +22,10 @@ const Hero = ({ onRequestQuote }: HeroProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-6"
+            className="font-body text-sm tracking-[0.3em] uppercase mb-6 flex items-center gap-3"
           >
-            Parceira estratégica em tradução simultânea
+            <span className="w-8 h-0.5 bg-red-accent inline-block" />
+            <span className="text-gold">Parceira estratégica em tradução simultânea</span>
           </motion.p>
 
           <motion.h1
