@@ -86,8 +86,8 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-gold/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-body text-xs text-muted/40">
-            © {new Date().getFullYear()} Tradupoints. Todos os direitos
-            reservados. CNPJ: XX.XXX.XXX/0001-XX
+© {new Date().getFullYear()} Tradupoints. Todos os direitos
+            reservados. CNPJ: 26.144.460/0001-87
           </p>
           <p className="font-body text-xs text-muted/40">
             Em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018)
