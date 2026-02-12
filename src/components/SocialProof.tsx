@@ -31,7 +31,7 @@ const testimonials = [
 const stats = [
   { value: "500+", label: "Eventos Realizados" },
   { value: "15+", label: "Anos de Expertise" },
-  { value: "98%", label: "Taxa de recorrência" },
+  { value: "98%", label: "Taxa de Recorrência" },
   { value: "7+", label: "Idiomas Atendidos" },
 ];
 
