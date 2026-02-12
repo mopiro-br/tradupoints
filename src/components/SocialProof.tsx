@@ -32,7 +32,7 @@ const stats = [
   { value: "500+", label: "Eventos Realizados" },
   { value: "15+", label: "Anos de Expertise" },
   { value: "98%", label: "Taxa de recorrência" },
-  { value: "12+", label: "Idiomas Atendidos" },
+  { value: "7+", label: "Idiomas Atendidos" },
 ];
 
 const SocialProof = () => {
