@@ -23,7 +23,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md border-b border-gold/10">
       <nav className="container mx-auto flex items-center justify-between h-16 px-6 lg:px-12">
         <a href="#" className="flex items-center">
-          <img src={logoHorizontal} alt="Tradupoints" className="h-8" />
+          <img src={logoHorizontal} alt="Tradupoints" className="h-8 mix-blend-screen" />
         </a>
 
         <ul className="hidden lg:flex items-center gap-8">
