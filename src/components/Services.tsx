@@ -184,7 +184,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
               <div className="inline-flex items-center gap-2 mb-4">
                 <GraduationCap className="w-5 h-5 text-red-accent" />
                 <span className="text-xs font-body text-red-accent tracking-widest uppercase font-medium">
-                  Formação Profissional
+                  Para Intérpretes Profissionais
                 </span>
               </div>
               <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 leading-tight">
