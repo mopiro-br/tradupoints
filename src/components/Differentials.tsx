@@ -6,25 +6,25 @@ const items = [
     icon: Shield,
     title: "Confidencialidade Total",
     description:
-      "Sigilo absoluto sobre clientes e conteúdo. Atuamos com discrição e profissionalismo.",
+      "Proteção total de informações sensíveis. Sua marca e seus dados tratados com o máximo sigilo.",
   },
   {
     icon: Award,
     title: "Expertise Técnica",
     description:
-      "Especialistas em terminologia médica, científica e técnica de alta complexidade.",
+      "Domínio absoluto da terminologia médica, científica e técnica nos mais altos níveis de exigência.",
   },
   {
     icon: Clock,
     title: "Zero Imprevistos",
     description:
-      "Planejamento rigoroso e equipamentos redundantes para total confiabilidade.",
+      "Planejamento milimétrico e infraestrutura redundante. Cada detalhe sob controle absoluto.",
   },
   {
     icon: Users,
     title: "Parceria Estratégica",
     description:
-      "Trabalhamos como extensão da sua equipe, alinhados aos seus objetivos.",
+      "Atuamos como extensão do seu time, antecipando necessidades e superando expectativas.",
   },
 ];
 
@@ -39,10 +39,11 @@ const Differentials = () => {
           className="text-center mb-16"
         >
           <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">
-            Por que a Tradupoints
+            Por que nos escolher
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-background">
-            Diferenciais que fazem a diferença
+            Excelência que se traduz em{" "}
+            <span className="text-gradient-gold">resultados</span>
           </h2>
         </motion.div>
 
