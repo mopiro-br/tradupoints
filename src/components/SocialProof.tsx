@@ -65,7 +65,7 @@ const SocialProof = () => {
               transition={{ delay: i * 0.1, duration: 0.4 }}
               className="text-center"
             >
-              <p className="font-display text-4xl md:text-5xl font-bold text-gold mb-2">
+              <p className="font-display text-4xl md:text-5xl font-bold text-red-accent mb-2">
                 {stat.value}
               </p>
               <p className="font-body text-sm text-muted-foreground">
@@ -84,7 +84,7 @@ const SocialProof = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="bg-card border border-border rounded-xl p-8 hover:border-gold/30 transition-colors duration-300"
+              className="bg-card border border-border rounded-xl p-8 hover:border-red-accent/30 transition-colors duration-300"
             >
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.stars }).map((_, si) => (

@@ -86,9 +86,9 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
           
           <div className="relative z-10 grid lg:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-1.5 mb-6">
-                <Languages className="w-4 h-4 text-gold" />
-                <span className="text-xs font-body text-gold tracking-widest uppercase font-medium">
+              <div className="inline-flex items-center gap-2 bg-red-accent/10 border border-red-accent/30 rounded-full px-4 py-1.5 mb-6">
+                <Languages className="w-4 h-4 text-red-accent" />
+                <span className="text-xs font-body text-red-accent tracking-widest uppercase font-medium">
                   Especialidade Principal
                 </span>
               </div>
@@ -109,7 +109,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                   "Glossários proprietários e preparo técnico dedicado",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-red-accent flex-shrink-0" />
                     <span className="font-body text-sm text-background/80">{item}</span>
                   </li>
                 ))}
