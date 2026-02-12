@@ -1,49 +1,47 @@
 import { motion } from "framer-motion";
 import { Languages, FileText, Headphones, Music, Mic2, Radio, GraduationCap, Smartphone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getWhatsAppUrl } from "@/components/WhatsAppButton";
+
+interface ServicesProps {
+  onRequestQuote: () => void;
+}
 
 const otherServices = [
   {
     icon: FileText,
     title: "Tradução Escrita Especializada",
-    description:
-      "Tradução técnica de documentos médicos, científicos e corporativos com rigor terminológico e revisão criteriosa.",
+    description: "Tradução técnica de documentos médicos, científicos e corporativos com rigor terminológico e revisão criteriosa.",
   },
   {
     icon: Headphones,
     title: "Transcrição Audiovisual",
-    description:
-      "Transcrição profissional com fidelidade absoluta ao conteúdo original, preservando nuances técnicas e contextuais.",
+    description: "Transcrição profissional com fidelidade absoluta ao conteúdo original, preservando nuances técnicas e contextuais.",
   },
   {
     icon: Smartphone,
     title: "Tecnologia BYOD",
-    description:
-      "Sistema inovador que substitui receptores tradicionais: discreto, sustentável e sem filas. Modernidade integrada à tradição da interpretação.",
+    description: "Sistema inovador que substitui receptores tradicionais: discreto, sustentável e sem filas. Modernidade integrada à tradição da interpretação.",
   },
   {
     icon: Music,
     title: "Sonorização & DJ",
-    description:
-      "Sonorização de alto padrão para eventos corporativos e celebrações exclusivas, com equipamentos de última geração.",
+    description: "Sonorização de alto padrão para eventos corporativos e celebrações exclusivas, com equipamentos de última geração.",
   },
   {
     icon: Mic2,
     title: "Mestre de Cerimônia",
-    description:
-      "Condução sofisticada de eventos com elegância, pontualidade e domínio de palco para experiências memoráveis.",
+    description: "Condução sofisticada de eventos com elegância, pontualidade e domínio de palco para experiências memoráveis.",
   },
   {
     icon: Radio,
     title: "Palestra Silenciosa",
-    description:
-      "Equipamentos de transmissão de última geração — tecnologia e discrição que elevam a experiência do participante.",
+    description: "Equipamentos de transmissão de última geração — tecnologia e discrição que elevam a experiência do participante.",
   },
   {
     icon: GraduationCap,
     title: "Mentoria para Intérpretes",
-    description:
-      "Programa exclusivo de formação para intérpretes que desejam dominar eventos médicos, científicos e técnicos de alta complexidade.",
+    description: "Programa exclusivo de formação para intérpretes que desejam dominar eventos médicos, científicos e técnicos de alta complexidade.",
   },
 ];
 
@@ -56,7 +54,7 @@ const fadeUp = {
   }),
 };
 
-const Services = () => {
+const Services = ({ onRequestQuote }: ServicesProps) => {
   return (
     <section id="servicos" className="section-padding bg-background">
       <div className="container mx-auto">
@@ -98,9 +96,9 @@ const Services = () => {
                 Tradução Simultânea Premium
               </h3>
               <p className="font-body text-muted/70 leading-relaxed mb-6 max-w-lg">
-                Não apenas traduzimos palavras: facilitamos diálogos estratégicos, 
-                conectamos pessoas e ideias, transformando complexidade em clareza 
-                e confiança. Preparação meticulosa com estudo prévio de conteúdos 
+                Não apenas traduzimos palavras: facilitamos diálogos estratégicos,
+                conectamos pessoas e ideias, transformando complexidade em clareza
+                e confiança. Preparação meticulosa com estudo prévio de conteúdos
                 e glossários técnicos personalizados.
               </p>
               <ul className="space-y-3 mb-8">
@@ -116,9 +114,11 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <Button variant="gold" size="lg" className="text-base">
-                Fale Com Nossa Equipe
-                <ArrowRight className="w-4 h-4 ml-1" />
+              <Button variant="gold" size="lg" className="text-base" asChild>
+                <a href={getWhatsAppUrl("Olá! Gostaria de saber mais sobre tradução simultânea para meu evento.")} target="_blank" rel="noopener noreferrer">
+                  Fale Com Nossa Equipe
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </a>
               </Button>
             </div>
             <div className="hidden lg:flex items-center justify-center">

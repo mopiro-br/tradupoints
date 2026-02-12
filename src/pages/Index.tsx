@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -7,19 +8,25 @@ import BlogPodcast from "@/components/BlogPodcast";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import LGPDNotice from "@/components/LGPDNotice";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import ContactFormDialog from "@/components/ContactFormDialog";
 
 const Index = () => {
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <main className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <Services />
+      <Navbar onRequestQuote={() => setContactOpen(true)} />
+      <Hero onRequestQuote={() => setContactOpen(true)} />
+      <Services onRequestQuote={() => setContactOpen(true)} />
       <Differentials />
       <SocialProof />
       <BlogPodcast />
-      <CTASection />
+      <CTASection onRequestQuote={() => setContactOpen(true)} />
       <Footer />
       <LGPDNotice />
+      <WhatsAppButton />
+      <ContactFormDialog open={contactOpen} onClose={() => setContactOpen(false)} />
     </main>
   );
 };
