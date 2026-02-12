@@ -4,7 +4,6 @@ import Services from "@/components/Services";
 import Differentials from "@/components/Differentials";
 import SocialProof from "@/components/SocialProof";
 import BlogPodcast from "@/components/BlogPodcast";
-import Mentoria from "@/components/Mentoria";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import LGPDNotice from "@/components/LGPDNotice";
@@ -18,7 +17,6 @@ const Index = () => {
       <Differentials />
       <SocialProof />
       <BlogPodcast />
-      <Mentoria />
       <CTASection />
       <Footer />
       <LGPDNotice />
