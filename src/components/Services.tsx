@@ -84,7 +84,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
               <div className="inline-flex items-center gap-2 bg-red-accent/10 border border-red-accent/30 rounded-full px-4 py-1.5 mb-6">
                 <Languages className="w-4 h-4 text-red-accent" />
                 <span className="text-xs font-body text-red-accent tracking-widest uppercase font-medium">
-                  Especialidade Principal
+                  Especialidade
                 </span>
               </div>
               <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-background mb-4 leading-tight">
