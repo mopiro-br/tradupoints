@@ -38,11 +38,6 @@ const CTASection = ({ onRequestQuote }: CTASectionProps) => {
               Solicitar Orçamento
               <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
-            <Button variant="gold-outline" size="lg" className="text-base px-12" asChild>
-              <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-                Fale Conosco
-              </a>
-            </Button>
           </div>
         </motion.div>
       </div>

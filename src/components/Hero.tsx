@@ -59,16 +59,6 @@ const Hero = ({ onRequestQuote }: HeroProps) => {
               Solicitar Orçamento
               <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
-            <Button
-              variant="gold-outline"
-              size="lg"
-              className="text-base px-10"
-              asChild
-            >
-              <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-                Fale Conosco
-              </a>
-            </Button>
           </motion.div>
         </div>
       </div>
