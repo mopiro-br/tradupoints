@@ -66,9 +66,9 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2">
               {[
-                { label: "Política de Privacidade (LGPD)", href: "#lgpd" },
-                { label: "Termos de Uso", href: "#lgpd" },
-                { label: "Política de Cookies", href: "#lgpd" },
+                { label: "Política de Privacidade (LGPD)", href: "/politica-de-privacidade" },
+                { label: "Termos de Uso", href: "/politica-de-privacidade" },
+                { label: "Política de Cookies", href: "/politica-de-privacidade" },
               ].map((s) => (
                 <li key={s.label}>
                   <a

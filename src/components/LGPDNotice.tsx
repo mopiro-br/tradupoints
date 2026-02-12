@@ -31,7 +31,7 @@ const LGPDNotice = () => {
             <p className="font-body text-sm text-muted/70 flex-1">
               Utilizamos cookies para melhorar sua experiência. Ao continuar navegando,
               você concorda com nossa{" "}
-              <a href="#lgpd" className="text-gold underline">
+              <a href="/politica-de-privacidade" className="text-gold underline">
                 Política de Privacidade
               </a>{" "}
               em conformidade com a LGPD (Lei nº 13.709/2018).
