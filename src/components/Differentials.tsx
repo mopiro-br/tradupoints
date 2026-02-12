@@ -4,27 +4,27 @@ import { Shield, Award, Clock, Users } from "lucide-react";
 const items = [
   {
     icon: Shield,
-    title: "Confidencialidade Total",
+    title: "Confidencialidade Absoluta",
     description:
-      "Proteção total de informações sensíveis. Sua marca e seus dados tratados com o máximo sigilo.",
+      "Proteção total de informações sensíveis. Sua marca e seus dados tratados com o máximo sigilo e discrição profissional.",
   },
   {
     icon: Award,
-    title: "Expertise Técnica",
+    title: "Expertise Técnica Profunda",
     description:
-      "Domínio absoluto da terminologia médica, científica e técnica nos mais altos níveis de exigência.",
+      "Domínio da terminologia médica, científica e técnica nos mais altos níveis de exigência. Preparação meticulosa com glossários personalizados.",
   },
   {
     icon: Clock,
-    title: "Zero Imprevistos",
+    title: "Execução Impecável",
     description:
-      "Planejamento milimétrico e infraestrutura redundante. Cada detalhe sob controle absoluto.",
+      "Planejamento milimétrico e infraestrutura redundante. Antecipamos necessidades e resolvemos antes que se tornem desafios.",
   },
   {
     icon: Users,
     title: "Parceria Estratégica",
     description:
-      "Atuamos como extensão do seu time, antecipando necessidades e superando expectativas.",
+      "Atuamos como extensão da sua equipe, compreendendo o contexto do evento e facilitando seu foco no conteúdo e na experiência.",
   },
 ];
 
@@ -42,8 +42,8 @@ const Differentials = () => {
             Por que nos escolher
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-background">
-            Excelência que se traduz em{" "}
-            <span className="text-gradient-gold">resultados</span>
+            Quando o evento não admite{" "}
+            <span className="text-gradient-gold">margem para erro</span>
           </h2>
         </motion.div>
 

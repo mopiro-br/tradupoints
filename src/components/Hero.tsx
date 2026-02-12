@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -13,7 +14,7 @@ const Hero = () => {
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/85 to-navy/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/90 to-navy/75" />
       </div>
 
       {/* Content */}
@@ -25,7 +26,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-6"
           >
-            Tradução Simultânea de Excelência
+            Parceira estratégica em tradução simultânea
           </motion.p>
 
           <motion.h1
@@ -34,8 +35,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-background leading-tight mb-6"
           >
-            Precisão e confiabilidade{" "}
-            <span className="text-gradient-gold">em cada palavra</span>
+            Quando cada palavra importa,{" "}
+            <span className="text-gradient-gold">a parceria certa faz toda a diferença</span>
           </motion.h1>
 
           <motion.p
@@ -44,9 +45,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl text-muted/70 font-body font-light max-w-2xl mb-10 leading-relaxed"
           >
-            Parceira estratégica de agências e empresas em eventos médicos,
-            científicos e técnicos de alta complexidade. Garantimos que cada
-            evento aconteça sem imprevistos.
+            Transformamos desafios multilíngues em comunicação clara, precisa e 
+            contextualizada — para que você se concentre no conteúdo e na 
+            experiência do seu evento.
           </motion.p>
 
           <motion.div
@@ -57,6 +58,7 @@ const Hero = () => {
           >
             <Button variant="gold" size="lg" className="text-base px-10">
               Solicitar Orçamento
+              <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
             <Button variant="gold-outline" size="lg" className="text-base px-10">
               Conheça Nossos Serviços

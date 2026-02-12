@@ -4,28 +4,34 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Profissionalismo impecável. A equipe da Tradupoints garantiu que nosso congresso internacional acontecesse sem nenhum problema de comunicação.",
-    role: "Coordenador de Congresso Científico",
+      "A Tradupoints garantiu que cada detalhe fosse impecável. A comunicação fluiu naturalmente e todos os participantes ficaram impressionados com a qualidade da interpretação.",
+    role: "Coordenadora de Congresso Médico Internacional",
     stars: 5,
   },
   {
     quote:
-      "Parceiros de confiança há anos. A precisão técnica na terminologia médica é excepcional, e a discrição da equipe é um diferencial enorme.",
-    role: "Diretora de Eventos Corporativos",
+      "Nunca vimos uma equipe tão preparada e discreta. O evento superou nossas expectativas — a expertise técnica e o profissionalismo elevaram a qualidade a outro nível.",
+    role: "Diretora de Eventos — Laboratório Farmacêutico Global",
     stars: 5,
   },
   {
     quote:
-      "Desde o planejamento até a execução, tudo foi perfeito. Equipamentos de ponta e intérpretes altamente qualificados.",
-    role: "Gerente de Marketing Farmacêutico",
+      "A Tradupoints transformou um potencial desastre em um grande sucesso. A expertise deles foi crucial para manter nossos clientes engajados durante todo o evento híbrido.",
+    role: "Gerente de Relações Institucionais",
+    stars: 5,
+  },
+  {
+    quote:
+      "Graças à Tradupoints, conseguimos superar barreiras linguísticas e culturais. A negociação fluiu com naturalidade e a parceria foi fechada com sucesso.",
+    role: "Coordenador de Projeto Internacional — Odontologia",
     stars: 5,
   },
 ];
 
 const stats = [
   { value: "500+", label: "Eventos Realizados" },
-  { value: "15+", label: "Anos de Experiência" },
-  { value: "98%", label: "Taxa de Satisfação" },
+  { value: "15+", label: "Anos de Expertise" },
+  { value: "98%", label: "Satisfação dos Parceiros" },
   { value: "12+", label: "Idiomas Atendidos" },
 ];
 
@@ -43,7 +49,8 @@ const SocialProof = () => {
             Confiança Comprovada
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-            O que dizem nossos parceiros
+            Parceria que transforma{" "}
+            <span className="text-gradient-gold">desafios em resultados</span>
           </h2>
         </motion.div>
 
@@ -69,15 +76,15 @@ const SocialProof = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="bg-card border border-border rounded-lg p-8 hover:border-gold/30 transition-colors duration-300"
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="bg-card border border-border rounded-xl p-8 hover:border-gold/30 transition-colors duration-300"
             >
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.stars }).map((_, si) => (

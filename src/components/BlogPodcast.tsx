@@ -1,37 +1,36 @@
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Podcast } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const blogPosts = [
   {
-    title: "O papel do intérprete em congressos médicos",
+    title: "Bastidores de um congresso médico internacional",
     excerpt:
-      "Como a tradução simultânea impacta a qualidade de eventos científicos de alta complexidade.",
-    category: "Interpretação",
+      "Como a preparação meticulosa — estudo de artigos, glossários técnicos e simulações — garante interpretação impecável em eventos de alta complexidade.",
+    category: "Expertise",
   },
   {
-    title: "Equipamentos essenciais para tradução simultânea",
+    title: "Tecnologia BYOD: o futuro da tradução simultânea",
     excerpt:
-      "Um guia completo sobre a tecnologia que garante a qualidade do seu evento.",
-    category: "Tecnologia",
+      "Conheça o sistema que substitui receptores tradicionais com discrição, sustentabilidade e modernidade — sem filas constrangedoras.",
+    category: "Inovação",
   },
   {
-    title: "Tendências em eventos corporativos internacionais",
+    title: "Contextualização técnica: além da tradução literal",
     excerpt:
-      "O que esperar do futuro dos eventos multilíngues e como se preparar.",
-    category: "Mercado",
+      "Por que dominar a terminologia médica e científica é apenas o começo. A verdadeira expertise está na contextualização estratégica.",
+    category: "Conhecimento",
   },
 ];
 
 const podcastEpisodes = [
   {
-    title: "Bastidores da Cabine",
-    description: "O dia a dia de um intérprete de conferência.",
+    title: "Quando Cada Palavra Importa",
+    description: "Os desafios de interpretar terminologia oncológica em congressos internacionais com centenas de participantes.",
     episode: "Ep. 12",
   },
   {
-    title: "Terminologia Médica",
-    description: "Desafios e estratégias para precisão em eventos de saúde.",
+    title: "Parceria Estratégica em Eventos",
+    description: "Como a preparação meticulosa transforma a experiência de palestrantes e participantes em eventos científicos.",
     episode: "Ep. 11",
   },
 ];
@@ -50,12 +49,11 @@ const BlogPodcast = () => {
             Conteúdo
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-            Blog & Podcast
+            Insights & Conhecimento
           </h2>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          {/* Blog Posts */}
           {blogPosts.map((post, i) => (
             <motion.article
               key={post.title}
@@ -63,7 +61,7 @@ const BlogPodcast = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="bg-card border border-border rounded-lg p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 cursor-pointer group"
+              className="bg-card border border-border rounded-xl p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 cursor-pointer group"
             >
               <div className="flex items-center gap-2 mb-4">
                 <BookOpen className="w-4 h-4 text-gold" />
@@ -89,7 +87,7 @@ const BlogPodcast = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-navy rounded-lg p-8 md:p-12"
+          className="bg-navy rounded-xl p-8 md:p-12"
         >
           <div className="flex items-center gap-3 mb-6">
             <Podcast className="w-6 h-6 text-gold" />
