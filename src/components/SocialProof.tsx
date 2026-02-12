@@ -58,24 +58,28 @@ const testimonials = [
   {
     quote:
       "A Tradupoints garantiu que cada detalhe fosse impecável. A comunicação fluiu naturalmente e todos os participantes ficaram impressionados com a qualidade da interpretação.",
+    name: "Mariana Esteves",
     role: "Coordenadora de Congresso Médico Internacional",
     stars: 5,
   },
   {
     quote:
       "Nunca vimos uma equipe tão preparada e discreta. O evento superou nossas expectativas — a expertise técnica e o profissionalismo elevaram a qualidade a outro nível.",
+    name: "Renata Albuquerque",
     role: "Diretora de Eventos — Laboratório Farmacêutico Global",
     stars: 5,
   },
   {
     quote:
       "A Tradupoints transformou um potencial desastre em um grande sucesso. A expertise deles foi crucial para manter nossos clientes engajados durante todo o evento híbrido.",
+    name: "Fernando Castilho",
     role: "Gerente de Relações Institucionais",
     stars: 5,
   },
   {
     quote:
       "Graças à Tradupoints, conseguimos superar barreiras linguísticas e culturais. A negociação fluiu com naturalidade e a parceria foi fechada com sucesso.",
+    name: "Cláudio Monteiro",
     role: "Coordenador de Projeto Internacional — Odontologia",
     stars: 5,
   },
@@ -135,6 +139,9 @@ const SocialProof = () => {
               </div>
               <p className="font-body text-sm text-foreground/80 leading-relaxed mb-6 italic">
                 "{t.quote}"
+              </p>
+              <p className="font-body text-sm font-semibold text-foreground/90">
+                {t.name}
               </p>
               <p className="font-body text-xs text-muted-foreground tracking-wide uppercase">
                 {t.role}
