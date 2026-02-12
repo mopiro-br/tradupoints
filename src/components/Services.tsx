@@ -38,11 +38,6 @@ const otherServices = [
     title: "Palestra Silenciosa",
     description: "Equipamentos de transmissão de última geração — tecnologia e discrição que elevam a experiência do participante.",
   },
-  {
-    icon: GraduationCap,
-    title: "Mentoria para Intérpretes",
-    description: "Programa exclusivo de formação para intérpretes que desejam dominar eventos médicos, científicos e técnicos de alta complexidade.",
-  },
 ];
 
 const fadeUp = {
@@ -173,6 +168,51 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
             </motion.div>
           ))}
         </div>
+
+        {/* Mentoria Highlight */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative mt-16 bg-card border border-border rounded-2xl p-8 md:p-12 overflow-hidden group hover:border-gold/30 transition-colors duration-300"
+        >
+          <div className="absolute top-0 right-0 w-64 h-64 bg-red-accent/5 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3" />
+
+          <div className="relative z-10 grid lg:grid-cols-[1fr_auto] gap-8 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 mb-4">
+                <GraduationCap className="w-5 h-5 text-red-accent" />
+                <span className="text-xs font-body text-red-accent tracking-widest uppercase font-medium">
+                  Formação Profissional
+                </span>
+              </div>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 leading-tight">
+                Mentoria para Intérpretes de Conferência
+              </h3>
+              <p className="font-body text-muted-foreground leading-relaxed max-w-2xl mb-6">
+                Programa exclusivo para intérpretes que desejam se especializar em eventos 
+                médicos, científicos e técnicos de alta complexidade. Compartilhamos anos de 
+                experiência com preparação meticulosa, glossários técnicos e domínio de palco.
+              </p>
+              <ul className="flex flex-wrap gap-3">
+                {["Técnicas avançadas", "Eventos médicos", "Orientação de carreira", "Acompanhamento contínuo"].map((tag) => (
+                  <li key={tag} className="font-body text-xs tracking-wide text-muted-foreground border border-border rounded-full px-4 py-1.5">
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex-shrink-0">
+              <Button variant="gold-outline" size="lg" className="text-base" asChild>
+                <a href={getWhatsAppUrl("Olá! Tenho interesse na mentoria para intérpretes de conferência.")} target="_blank" rel="noopener noreferrer">
+                  Saiba Mais
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
