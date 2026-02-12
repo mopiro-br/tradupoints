@@ -193,7 +193,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
               <p className="font-body text-muted-foreground leading-relaxed max-w-2xl mb-6">
                 Programa exclusivo para intérpretes que desejam se especializar em eventos 
                 médicos, científicos e de alta complexidade. Compartilhamos anos de 
-                experiência com preparação meticulosa, glossários técnicos, técnicas avançadas e ferramentas tecnológicas de ponta.
+                experiência com preparação meticulosa, elaboração de glossários, técnicas avançadas e ferramentas tecnológicas de ponta.
               </p>
               <ul className="flex flex-wrap gap-3">
                 {["Técnicas avançadas", "Eventos médicos", "Orientação de carreira", "Acompanhamento contínuo"].map((tag) => (
