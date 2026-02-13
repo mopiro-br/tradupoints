@@ -16,6 +16,7 @@ import MentoriaLogin from "./pages/MentoriaLogin";
 import MentoriaDashboard from "./pages/MentoriaDashboard";
 import MentoriaAdmin from "./pages/MentoriaAdmin";
 import MentoriaSetPassword from "./pages/MentoriaSetPassword";
+import QuemSomos from "./pages/QuemSomos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/quem-somos" element={<QuemSomos />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />

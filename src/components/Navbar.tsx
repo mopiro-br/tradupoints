@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import logoHorizontal from "@/assets/logo-horizontal.png";
 
 const navItems = [
+  { label: "Quem Somos", href: "/quem-somos" },
   { label: "Serviços", href: "#servicos" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Depoimentos", href: "#depoimentos" },
