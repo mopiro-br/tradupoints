@@ -2,13 +2,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom";
 import logoHorizontal from "@/assets/logo-horizontal.png";
 
 const navItems = [
   { label: "Serviços", href: "#servicos" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Depoimentos", href: "#depoimentos" },
-  { label: "Blog", href: "#blog" },
+  { label: "Blog", href: "/blog" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -30,7 +31,13 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
           {navItems.map((item) => (
             <li key={item.href}>
               <a
-                href={item.href}
+                href={item.href.startsWith("#") ? item.href : undefined}
+                onClick={(e) => {
+                  if (!item.href.startsWith("#")) {
+                    e.preventDefault();
+                    window.location.href = item.href;
+                  }
+                }}
                 className="text-sm font-body tracking-wide text-muted/80 hover:text-gold transition-colors duration-300"
               >
                 {item.label}
@@ -66,8 +73,14 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
               {navItems.map((item) => (
                 <li key={item.href}>
                   <a
-                    href={item.href}
-                    onClick={() => setOpen(false)}
+                    href={item.href.startsWith("#") ? item.href : undefined}
+                    onClick={(e) => {
+                      setOpen(false);
+                      if (!item.href.startsWith("#")) {
+                        e.preventDefault();
+                        window.location.href = item.href;
+                      }
+                    }}
                     className="text-sm font-body text-muted/80 hover:text-gold transition-colors"
                   >
                     {item.label}
