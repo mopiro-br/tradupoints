@@ -84,7 +84,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-red-accent/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-gold/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-body text-xs text-muted/40">
 © {new Date().getFullYear()} Tradupoints. Todos os direitos
             reservados. CNPJ: 26.144.460/0001-87
