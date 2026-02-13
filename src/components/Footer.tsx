@@ -103,17 +103,14 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2">
               {[
-                { label: "Política de Privacidade (LGPD)", href: "/politica-de-privacidade" },
-                { label: "Termos de Uso", href: "/politica-de-privacidade" },
-                { label: "Política de Cookies", href: "/politica-de-cookies" },
-              ].map((s) => (
-                <li key={s.label}>
-                  <a
-                    href={s.href}
-                    className="font-body text-sm text-muted/50 hover:text-gold transition-colors"
-                  >
-                    {s.label}
-                  </a>
+                "Política de Privacidade (LGPD)",
+                "Termos de Uso",
+                "Política de Cookies",
+              ].map((label) => (
+                <li key={label}>
+                  <span className="font-body text-sm text-muted/50">
+                    {label}
+                  </span>
                 </li>
               ))}
             </ul>
