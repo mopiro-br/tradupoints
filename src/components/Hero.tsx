@@ -12,7 +12,7 @@ const Hero = ({ onRequestQuote }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover" loading="eager" />
+        <img src={heroBg} alt="" className="w-full h-full object-cover object-right -scale-x-100" loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/90 to-navy/75" />
       </div>
 
