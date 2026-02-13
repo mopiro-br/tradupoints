@@ -12,12 +12,12 @@ const Hero = ({ onRequestQuote }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover object-left" loading="eager" />
+        <img src={heroBg} alt="" className="w-full h-full object-cover" loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/90 to-navy/75" />
       </div>
 
       <div className="relative z-10 container mx-auto px-6 lg:px-12 pt-20">
-        <div className="max-w-3xl ml-auto">
+        <div className="max-w-3xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
