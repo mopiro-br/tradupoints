@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, BookOpen, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo-colorida.png";
-import blogPosts from "@/data/blogPosts";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -11,6 +11,7 @@ import ContactFormDialog from "@/components/ContactFormDialog";
 
 const Blog = () => {
   const [contactOpen, setContactOpen] = useState(false);
+  const { data: posts, isLoading } = useBlogPosts();
 
   return (
     <main className="min-h-screen bg-background">
@@ -39,47 +40,51 @@ const Blog = () => {
             </p>
           </motion.div>
 
-          <div className="flex flex-col gap-8">
-            {blogPosts.map((post, i) => (
-              <motion.article
-                key={post.slug}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-              >
-                <Link to={`/blog/${post.slug}`}>
-                  <div className="bg-card border border-border rounded-xl p-8 hover:border-red-accent/30 hover:shadow-lg hover:shadow-red-accent/5 transition-all duration-300 group">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="inline-flex items-center gap-1.5 text-xs font-body text-gold tracking-widest uppercase">
-                        <BookOpen className="w-3.5 h-3.5" />
-                        {post.category}
-                      </span>
-                      <span className="text-xs text-muted-foreground font-body">
-                        {new Date(post.date).toLocaleDateString("pt-BR", {
-                          day: "numeric",
-                          month: "long",
-                          year: "numeric",
-                        })}
-                      </span>
-                      <span className="inline-flex items-center gap-1 text-xs text-muted-foreground font-body">
-                        <Clock className="w-3 h-3" />
-                        {post.readTime}
+          {isLoading ? (
+            <p className="text-center text-muted-foreground font-body py-12">Carregando artigos...</p>
+          ) : (
+            <div className="flex flex-col gap-8">
+              {posts?.map((post, i) => (
+                <motion.article
+                  key={post.slug}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                >
+                  <Link to={`/blog/${post.slug}`}>
+                    <div className="bg-card border border-border rounded-xl p-8 hover:border-red-accent/30 hover:shadow-lg hover:shadow-red-accent/5 transition-all duration-300 group">
+                      <div className="flex items-center gap-4 mb-4">
+                        <span className="inline-flex items-center gap-1.5 text-xs font-body text-gold tracking-widest uppercase">
+                          <BookOpen className="w-3.5 h-3.5" />
+                          {post.category}
+                        </span>
+                        <span className="text-xs text-muted-foreground font-body">
+                          {new Date(post.created_at).toLocaleDateString("pt-BR", {
+                            day: "numeric",
+                            month: "long",
+                            year: "numeric",
+                          })}
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-xs text-muted-foreground font-body">
+                          <Clock className="w-3 h-3" />
+                          {post.read_time}
+                        </span>
+                      </div>
+                      <h2 className="font-display text-xl md:text-2xl font-semibold text-foreground mb-3 group-hover:text-red-accent transition-colors">
+                        {post.title}
+                      </h2>
+                      <p className="font-body text-muted-foreground leading-relaxed mb-4">
+                        {post.excerpt}
+                      </p>
+                      <span className="inline-flex items-center gap-1 text-sm text-gold font-body group-hover:text-red-accent group-hover:gap-2 transition-all">
+                        Ler artigo completo <ArrowRight className="w-3.5 h-3.5" />
                       </span>
                     </div>
-                    <h2 className="font-display text-xl md:text-2xl font-semibold text-foreground mb-3 group-hover:text-red-accent transition-colors">
-                      {post.title}
-                    </h2>
-                    <p className="font-body text-muted-foreground leading-relaxed mb-4">
-                      {post.excerpt}
-                    </p>
-                    <span className="inline-flex items-center gap-1 text-sm text-gold font-body group-hover:text-red-accent group-hover:gap-2 transition-all">
-                      Ler artigo completo <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                  </div>
-                </Link>
-              </motion.article>
-            ))}
-          </div>
+                  </Link>
+                </motion.article>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
