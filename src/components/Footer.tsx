@@ -139,9 +139,12 @@ const Footer = () => {
             © {new Date().getFullYear()} Tradupoints. Todos os direitos
             reservados. CNPJ: 26.144.460/0001-87
           </p>
-          <p className="font-body text-xs text-muted/40">
-            Em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018)
-          </p>
+          <a
+            href="/admin/login"
+            className="font-body text-xs text-muted/20 hover:text-muted/40 transition-colors"
+          >
+            Admin
+          </a>
         </div>
       </div>
     </footer>
