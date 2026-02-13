@@ -25,7 +25,7 @@ const Hero = ({ onRequestQuote }: HeroProps) => {
             className="font-body text-sm tracking-[0.3em] uppercase mb-6 flex items-center gap-3"
           >
             <span className="w-8 h-0.5 bg-red-accent inline-block" />
-            <span className="text-gold">Parceira estratégica em tradução simultânea</span>
+            <span className="text-gold">Parceira estratégica em eventos</span>
           </motion.p>
 
           <motion.h1
@@ -34,8 +34,8 @@ const Hero = ({ onRequestQuote }: HeroProps) => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-background leading-tight mb-6"
           >
-            Onde a técnica encontra{" "}
-            <span className="text-gradient-gold">a estratégia em tradução simultânea</span>
+            Tradução simultânea{" "}
+            <span className="text-gradient-gold">técnica e estratégica</span>
           </motion.h1>
 
           <motion.p
