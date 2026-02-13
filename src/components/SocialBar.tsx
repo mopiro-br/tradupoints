@@ -39,21 +39,27 @@ const socialLinks = [
 
 const SocialBar = () => {
   return (
-    <div className="bg-navy-dark/50 border-t border-b border-gold/10 py-6">
-      <div className="container mx-auto px-6 lg:px-12 flex items-center justify-center gap-2">
-        <span className="font-body text-xs text-muted/40 mr-3">Siga-nos</span>
-        {socialLinks.map((social) => (
-          <a
-            key={social.label}
-            href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={social.label}
-            className="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center text-muted/40 hover:text-gold hover:border-gold transition-all duration-300"
-          >
-            {social.icon}
-          </a>
-        ))}
+    <div className="bg-navy py-5">
+      <div className="container mx-auto px-6 lg:px-12 flex items-center justify-center gap-4">
+        <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold/30" />
+        <span className="font-body text-xs text-gold/50 tracking-[0.2em] uppercase">
+          Siga-nos
+        </span>
+        <div className="flex items-center gap-3">
+          {socialLinks.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              className="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center text-gold/40 hover:text-red-accent hover:border-red-accent/50 hover:bg-red-accent/5 transition-all duration-300"
+            >
+              {social.icon}
+            </a>
+          ))}
+        </div>
+        <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/30" />
       </div>
     </div>
   );
