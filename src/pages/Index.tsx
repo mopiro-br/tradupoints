@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Differentials from "@/components/Differentials";
+import AboutUs from "@/components/AboutUs";
 import SocialProof from "@/components/SocialProof";
 import BlogPodcast from "@/components/BlogPodcast";
 import CTASection from "@/components/CTASection";
@@ -21,6 +22,7 @@ const Index = () => {
       <Hero onRequestQuote={() => setContactOpen(true)} />
       <Services onRequestQuote={() => setContactOpen(true)} />
       <Differentials />
+      <AboutUs />
       <SocialProof />
       <CTASection onRequestQuote={() => setContactOpen(true)} />
       <BlogPodcast />
