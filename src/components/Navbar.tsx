@@ -10,6 +10,7 @@ const navItems = [
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Blog", href: "/blog" },
+  { label: "Mentoria", href: "/mentoria/login" },
   { label: "Contato", href: "#contato" },
 ];
 
