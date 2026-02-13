@@ -45,9 +45,13 @@ const BlogPodcast = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">
-            Conteúdo
-          </p>
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <span className="w-8 h-0.5 bg-red-accent inline-block" />
+            <p className="text-gold font-body text-sm tracking-[0.3em] uppercase">
+              Conteúdo
+            </p>
+            <span className="w-8 h-0.5 bg-red-accent inline-block" />
+          </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
             Insights & Conhecimento
           </h2>
@@ -75,7 +79,7 @@ const BlogPodcast = () => {
               <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
                 {post.excerpt}
               </p>
-              <span className="inline-flex items-center gap-1 text-sm text-gold font-body">
+              <span className="inline-flex items-center gap-1 text-sm text-red-accent font-body font-medium group-hover:text-red-accent/80 transition-colors">
                 Ler mais <ArrowRight className="w-3 h-3" />
               </span>
             </motion.article>
