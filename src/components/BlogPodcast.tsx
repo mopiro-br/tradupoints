@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-colorida.png";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import blogPosts from "@/data/blogPosts";
