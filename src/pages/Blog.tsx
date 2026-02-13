@@ -24,11 +24,11 @@ const Blog = () => {
           >
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-red-accent transition-colors mb-6"
             >
               <ArrowLeft className="w-4 h-4" /> Voltar ao início
             </Link>
-            <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">
+            <p className="text-red-accent font-body text-sm tracking-[0.3em] uppercase mb-3">
               Blog
             </p>
             <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground">
@@ -49,7 +49,7 @@ const Blog = () => {
                 transition={{ delay: i * 0.1, duration: 0.5 }}
               >
                 <Link to={`/blog/${post.slug}`}>
-                  <div className="bg-card border border-border rounded-xl p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group">
+                  <div className="bg-card border border-border rounded-xl p-8 hover:border-red-accent/30 hover:shadow-lg hover:shadow-red-accent/5 transition-all duration-300 group">
                     <div className="flex items-center gap-4 mb-4">
                       <span className="inline-flex items-center gap-1.5 text-xs font-body text-gold tracking-widest uppercase">
                         <BookOpen className="w-3.5 h-3.5" />
@@ -67,13 +67,13 @@ const Blog = () => {
                         {post.readTime}
                       </span>
                     </div>
-                    <h2 className="font-display text-xl md:text-2xl font-semibold text-foreground mb-3 group-hover:text-gold transition-colors">
+                    <h2 className="font-display text-xl md:text-2xl font-semibold text-foreground mb-3 group-hover:text-red-accent transition-colors">
                       {post.title}
                     </h2>
                     <p className="font-body text-muted-foreground leading-relaxed mb-4">
                       {post.excerpt}
                     </p>
-                    <span className="inline-flex items-center gap-1 text-sm text-gold font-body group-hover:gap-2 transition-all">
+                    <span className="inline-flex items-center gap-1 text-sm text-gold font-body group-hover:text-red-accent group-hover:gap-2 transition-all">
                       Ler artigo completo <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </div>

@@ -62,7 +62,7 @@ const BlogPost = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-red-accent transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" /> Voltar ao blog
             </Link>
@@ -89,7 +89,7 @@ const BlogPost = () => {
               {post.title}
             </h1>
 
-            <div className="border-t border-border pt-8">
+            <div className="border-t border-gold/20 pt-8">
               {renderContent(post.content)}
             </div>
           </motion.div>
