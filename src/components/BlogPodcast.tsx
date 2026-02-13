@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logo from "@/assets/logo.png";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import blogPosts from "@/data/blogPosts";
@@ -18,8 +19,8 @@ const BlogPodcast = () => {
           <p className="text-red-accent font-body text-sm tracking-[0.3em] uppercase mb-3">
             Conteúdo
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-            Insights & Conhecimento
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground flex items-center justify-center gap-3 flex-wrap">
+            Blog da <img src={logo} alt="Tradupoints" className="h-8 md:h-10 inline-block" />
           </h2>
         </motion.div>
 
