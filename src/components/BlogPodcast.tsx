@@ -8,17 +8,14 @@ const BlogPodcast = () => {
   const previewPosts = blogPosts.slice(0, 3);
 
   return (
-    <section id="blog" className="section-padding bg-muted/30">
-      <div className="container mx-auto">
+    <section id="blog" className="py-16 md:py-20 bg-muted/30">
+      <div className="container mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
-          <p className="text-red-accent font-body text-sm tracking-[0.3em] uppercase mb-3">
-            Conteúdo
-          </p>
           <h2 className="flex items-center justify-center gap-2 flex-wrap">
             <span className="font-display text-xl md:text-2xl font-bold text-foreground tracking-tight">Blog da</span>
             <img src={logo} alt="Tradupoints" className="h-6 md:h-8 inline-block" />
