@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -137,9 +137,17 @@ const Admin = () => {
             <img src={logo} alt="Tradupoints" className="h-7" />
             <span className="text-xs text-gold/60 font-body tracking-widest uppercase">Admin</span>
           </div>
-          <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted/60 hover:text-gold">
-            <LogOut className="w-4 h-4 mr-1" /> Sair
-          </Button>
+          <div className="flex items-center gap-3">
+            <Link to="/" className="text-xs text-muted/50 hover:text-gold transition-colors font-body hidden sm:inline-flex items-center gap-1">
+              <ArrowLeft className="w-3 h-3" /> Site
+            </Link>
+            <Link to="/mentoria/admin" className="text-xs text-muted/50 hover:text-gold transition-colors font-body hidden sm:inline-flex items-center gap-1">
+              Mentoria
+            </Link>
+            <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted/60 hover:text-gold">
+              <LogOut className="w-4 h-4 mr-1" /> Sair
+            </Button>
+          </div>
         </div>
       </header>
 

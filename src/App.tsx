@@ -12,6 +12,10 @@ import AdminLogin from "./pages/AdminLogin";
 import Admin from "./pages/Admin";
 import ResetPassword from "./pages/ResetPassword";
 import UpdatePassword from "./pages/UpdatePassword";
+import MentoriaLogin from "./pages/MentoriaLogin";
+import MentoriaDashboard from "./pages/MentoriaDashboard";
+import MentoriaAdmin from "./pages/MentoriaAdmin";
+import MentoriaSetPassword from "./pages/MentoriaSetPassword";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +36,10 @@ const App = () => (
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/reset-password" element={<ResetPassword />} />
           <Route path="/admin/update-password" element={<UpdatePassword />} />
+          <Route path="/mentoria/login" element={<MentoriaLogin />} />
+          <Route path="/mentoria/admin" element={<MentoriaAdmin />} />
+          <Route path="/mentoria/set-password" element={<MentoriaSetPassword />} />
+          <Route path="/mentoria" element={<MentoriaDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
