@@ -59,13 +59,9 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <span className="w-8 h-0.5 bg-red-accent inline-block" />
-            <p className="text-gold font-body text-sm tracking-[0.3em] uppercase">
-              Nossos Serviços
-            </p>
-            <span className="w-8 h-0.5 bg-red-accent inline-block" />
-          </div>
+          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">
+            Nossos Serviços
+          </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
             Expertise que vai além da{" "}
             <span className="text-gradient-gold">tradução literal</span>
@@ -157,15 +153,12 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="group p-7 rounded-xl border border-border bg-card hover:border-gold/40 hover:shadow-lg transition-all duration-300"
+              className="group p-7 rounded-xl border border-border bg-card hover:border-red-accent/50 hover:shadow-lg hover:shadow-red-accent/5 transition-all duration-300"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <service.icon
-                  className="w-8 h-8 text-gold/70 group-hover:text-gold transition-colors"
-                  strokeWidth={1.5}
-                />
-                <div className="w-1 h-8 rounded-full bg-red-accent/40 group-hover:bg-red-accent transition-colors" />
-              </div>
+              <service.icon
+                className="w-9 h-9 mb-4 text-gold/70 group-hover:text-red-accent transition-colors duration-300"
+                strokeWidth={1.5}
+              />
               <h3 className="font-display text-lg font-semibold text-foreground mb-2">
                 {service.title}
               </h3>
