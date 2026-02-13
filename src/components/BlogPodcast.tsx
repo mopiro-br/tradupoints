@@ -2,10 +2,13 @@ import { motion } from "framer-motion";
 import logo from "@/assets/logo-colorida.png";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
-import blogPosts from "@/data/blogPosts";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
 
 const BlogPodcast = () => {
-  const previewPosts = blogPosts.slice(0, 3);
+  const { data: posts } = useBlogPosts();
+  const previewPosts = (posts || []).slice(0, 3);
+
+  if (previewPosts.length === 0) return null;
 
   return (
     <section id="blog" className="py-16 md:py-20 bg-muted/30">

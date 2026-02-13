@@ -2,19 +2,26 @@ import { useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, BookOpen, Clock } from "lucide-react";
-import blogPosts from "@/data/blogPosts";
+import { useBlogPost } from "@/hooks/useBlogPosts";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ContactFormDialog from "@/components/ContactFormDialog";
 
-const BlogPost = () => {
+const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const [contactOpen, setContactOpen] = useState(false);
+  const { data: post, isLoading, isError } = useBlogPost(slug);
 
-  const post = blogPosts.find((p) => p.slug === slug);
+  if (isLoading) {
+    return (
+      <main className="min-h-screen bg-background flex items-center justify-center">
+        <p className="text-muted-foreground font-body">Carregando...</p>
+      </main>
+    );
+  }
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (isError || !post) return <Navigate to="/blog" replace />;
 
   const renderContent = (content: string) => {
     return content.split("\n\n").map((block, i) => {
@@ -73,7 +80,7 @@ const BlogPost = () => {
                 {post.category}
               </span>
               <span className="text-xs text-muted-foreground font-body">
-                {new Date(post.date).toLocaleDateString("pt-BR", {
+                {new Date(post.created_at).toLocaleDateString("pt-BR", {
                   day: "numeric",
                   month: "long",
                   year: "numeric",
@@ -81,7 +88,7 @@ const BlogPost = () => {
               </span>
               <span className="inline-flex items-center gap-1 text-xs text-muted-foreground font-body">
                 <Clock className="w-3 h-3" />
-                {post.readTime}
+                {post.read_time}
               </span>
             </div>
 
@@ -103,4 +110,4 @@ const BlogPost = () => {
   );
 };
 
-export default BlogPost;
+export default BlogPostPage;
