@@ -134,14 +134,16 @@ const Admin = () => {
       <header className="bg-navy border-b border-gold/10 px-6 py-4">
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <img src={logo} alt="Tradupoints" className="h-7" />
+            <Link to="/">
+              <img src={logo} alt="Tradupoints" className="h-7" />
+            </Link>
             <span className="text-xs text-gold/60 font-body tracking-widest uppercase">Admin</span>
           </div>
           <div className="flex items-center gap-3">
-            <Link to="/" className="text-xs text-muted/50 hover:text-gold transition-colors font-body hidden sm:inline-flex items-center gap-1">
+            <Link to="/" className="text-xs text-muted/50 hover:text-gold transition-colors font-body inline-flex items-center gap-1">
               <ArrowLeft className="w-3 h-3" /> Site
             </Link>
-            <Link to="/mentoria/admin" className="text-xs text-muted/50 hover:text-gold transition-colors font-body hidden sm:inline-flex items-center gap-1">
+            <Link to="/mentoria/admin" className="text-xs text-muted/50 hover:text-gold transition-colors font-body inline-flex items-center gap-1">
               Mentoria
             </Link>
             <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted/60 hover:text-gold">

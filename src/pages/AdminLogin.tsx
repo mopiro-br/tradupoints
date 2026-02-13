@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { ArrowLeft } from "lucide-react";
 import logo from "@/assets/logo-horizontal.png";
 
 const AdminLogin = () => {
@@ -68,12 +69,18 @@ const AdminLogin = () => {
           <Button type="submit" variant="gold" className="w-full" disabled={loading}>
             {loading ? "Entrando..." : "Entrar"}
           </Button>
-          <div className="text-center">
+          <div className="text-center space-y-2">
             <Link
               to="/admin/reset-password"
-              className="font-body text-xs text-muted/40 hover:text-gold transition-colors"
+              className="block font-body text-xs text-muted/40 hover:text-gold transition-colors"
             >
               Esqueci minha senha
+            </Link>
+            <Link
+              to="/"
+              className="inline-flex items-center gap-1 text-sm text-muted/50 hover:text-gold transition-colors font-body"
+            >
+              <ArrowLeft className="w-4 h-4" /> Voltar ao site
             </Link>
           </div>
         </form>
