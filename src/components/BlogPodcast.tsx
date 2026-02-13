@@ -19,8 +19,9 @@ const BlogPodcast = () => {
           <p className="text-red-accent font-body text-sm tracking-[0.3em] uppercase mb-3">
             Conteúdo
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground flex items-center justify-center gap-3 flex-wrap">
-            Blog da <img src={logo} alt="Tradupoints" className="h-8 md:h-10 inline-block" />
+          <h2 className="flex items-center justify-center gap-2 flex-wrap">
+            <span className="font-display text-xl md:text-2xl font-bold text-foreground tracking-tight">Blog da</span>
+            <img src={logo} alt="Tradupoints" className="h-6 md:h-8 inline-block" />
           </h2>
         </motion.div>
 

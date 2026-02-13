@@ -29,8 +29,9 @@ const Blog = () => {
             >
               <ArrowLeft className="w-4 h-4" /> Voltar ao início
             </Link>
-            <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground flex items-center gap-3 flex-wrap">
-              Blog da <img src={logo} alt="Tradupoints" className="h-9 md:h-12 inline-block" />
+            <h1 className="flex items-center gap-2 flex-wrap">
+              <span className="font-display text-xl md:text-2xl font-bold text-foreground tracking-tight">Blog da</span>
+              <img src={logo} alt="Tradupoints" className="h-7 md:h-9 inline-block" />
             </h1>
             <p className="font-body text-muted-foreground mt-4 max-w-2xl">
               Artigos sobre tradução simultânea, eventos médicos e científicos,
