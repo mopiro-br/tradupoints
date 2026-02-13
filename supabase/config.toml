@@ -2,3 +2,6 @@ project_id = "nmgdnsbtgvbvcnyjtnus"
 
 [functions.send-quote-request]
 verify_jwt = false
+
+[functions.create-admin]
+verify_jwt = false
