@@ -102,9 +102,13 @@ const SocialProof = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">
-            Confiança Comprovada
-          </p>
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <span className="w-8 h-0.5 bg-red-accent inline-block" />
+            <p className="text-gold font-body text-sm tracking-[0.3em] uppercase">
+              Confiança Comprovada
+            </p>
+            <span className="w-8 h-0.5 bg-red-accent inline-block" />
+          </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
             Parceria que transforma{" "}
             <span className="text-gradient-gold">desafios em resultados</span>
@@ -140,6 +144,7 @@ const SocialProof = () => {
               <p className="font-body text-sm text-foreground/80 leading-relaxed mb-6 italic">
                 "{t.quote}"
               </p>
+              <div className="w-6 h-0.5 bg-red-accent/50 mb-4" />
               <p className="font-body text-sm font-semibold text-foreground/90">
                 {t.name}
               </p>
