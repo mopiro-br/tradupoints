@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, BookOpen, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 import blogPosts from "@/data/blogPosts";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -28,11 +29,8 @@ const Blog = () => {
             >
               <ArrowLeft className="w-4 h-4" /> Voltar ao início
             </Link>
-            <p className="text-red-accent font-body text-sm tracking-[0.3em] uppercase mb-3">
-              Blog
-            </p>
-            <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground">
-              Insights & Conhecimento
+            <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground flex items-center gap-3 flex-wrap">
+              Blog da <img src={logo} alt="Tradupoints" className="h-9 md:h-12 inline-block" />
             </h1>
             <p className="font-body text-muted-foreground mt-4 max-w-2xl">
               Artigos sobre tradução simultânea, eventos médicos e científicos,
