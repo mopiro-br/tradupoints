@@ -6,6 +6,7 @@ import Differentials from "@/components/Differentials";
 import SocialProof from "@/components/SocialProof";
 import BlogPodcast from "@/components/BlogPodcast";
 import CTASection from "@/components/CTASection";
+import SocialBar from "@/components/SocialBar";
 import Footer from "@/components/Footer";
 import LGPDNotice from "@/components/LGPDNotice";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -21,8 +22,9 @@ const Index = () => {
       <Services onRequestQuote={() => setContactOpen(true)} />
       <Differentials />
       <SocialProof />
-      <BlogPodcast />
       <CTASection onRequestQuote={() => setContactOpen(true)} />
+      <BlogPodcast />
+      <SocialBar />
       <Footer />
       <LGPDNotice />
       <WhatsAppButton />
