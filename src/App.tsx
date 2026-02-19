@@ -18,6 +18,7 @@ import MentoriaAdmin from "./pages/MentoriaAdmin";
 import MentoriaSetPassword from "./pages/MentoriaSetPassword";
 import QuemSomos from "./pages/QuemSomos";
 import NotFound from "./pages/NotFound";
+import StyleGuide from "./pages/StyleGuide";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/mentoria/admin" element={<MentoriaAdmin />} />
           <Route path="/mentoria/set-password" element={<MentoriaSetPassword />} />
           <Route path="/mentoria" element={<MentoriaDashboard />} />
+          <Route path="/style-guide" element={<StyleGuide />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
