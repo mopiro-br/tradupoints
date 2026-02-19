@@ -61,6 +61,22 @@ Deno.serve(async (req) => {
       });
     }
 
+    // Input validation
+    if (typeof name !== "string" || name.trim().length === 0 || name.length > 100) {
+      return new Response(JSON.stringify({ error: "Invalid name" }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (typeof email !== "string" || email.length > 255 || !emailRegex.test(email)) {
+      return new Response(JSON.stringify({ error: "Invalid email format" }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     // Create user with a random temp password and send invite
     const tempPassword = crypto.randomUUID() + "Aa1!";
 

@@ -17,14 +17,25 @@ const AdminLogin = () => {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const trimmedEmail = email.trim();
+    if (!trimmedEmail || trimmedEmail.length > 255) {
+      toast({ title: "E-mail inválido", variant: "destructive" });
+      return;
+    }
+    if (!password || password.length > 128) {
+      toast({ title: "Senha inválida", variant: "destructive" });
+      return;
+    }
+    
     setLoading(true);
 
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { error } = await supabase.auth.signInWithPassword({ email: trimmedEmail, password });
 
     if (error) {
       toast({
         title: "Erro ao entrar",
-        description: error.message,
+        description: "Credenciais inválidas.",
         variant: "destructive",
       });
     } else {
