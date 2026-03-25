@@ -12,19 +12,9 @@ const courses = [
   {
     title: "Escritório Inteligente para Intérpretes",
     description:
-      "Aprenda a estruturar um escritório digital eficiente, otimizando processos administrativos, financeiros e de produtividade para a carreira de intérprete.",
+      "Aprenda a estruturar um escritório digital eficiente, otimizando processos administrativos, financeiros e de produtividade para a carreira de intérprete. Inclui rotinas com IA e interfaces customizáveis criadas especialmente para intérpretes.",
     whatsappMessage:
       "Olá! Tenho interesse no curso Escritório Inteligente para Intérpretes. Gostaria de mais informações.",
-    lessons: [
-      "Planejamento e estrutura do escritório digital",
-      "Gestão financeira para intérpretes autônomos",
-      "Ferramentas de produtividade e organização",
-      "Gestão de clientes e relacionamento comercial",
-      "Propostas comerciais e precificação estratégica",
-      "Contratos e aspectos jurídicos essenciais",
-      "Marketing pessoal e presença digital",
-      "Automação e fluxos de trabalho otimizados",
-    ],
   },
   {
     title: "Ferramentas Tecnológicas — Um Kit para Intérpretes",
@@ -32,16 +22,6 @@ const courses = [
       "Domine as ferramentas digitais essenciais para a interpretação moderna: plataformas, softwares de glossário, IA aplicada e recursos que elevam sua performance.",
     whatsappMessage:
       "Olá! Tenho interesse no curso Ferramentas Tecnológicas para Intérpretes. Gostaria de mais informações.",
-    lessons: [
-      "Panorama das plataformas de interpretação remota",
-      "Softwares de glossário e terminologia",
-      "Inteligência artificial aplicada à interpretação",
-      "Ferramentas de preparação e pesquisa avançada",
-      "Áudio, som e configuração técnica ideal",
-      "Recursos colaborativos para equipes de intérpretes",
-      "Segurança digital e proteção de dados",
-      "Integração de ferramentas no fluxo de trabalho",
-    ],
   },
 ];
 
@@ -88,54 +68,28 @@ const Cursos = () => {
                 transition={{ duration: 0.6, delay: idx * 0.15 }}
                 className="bg-card border border-border rounded-2xl p-8 md:p-12 hover:border-gold/30 transition-colors duration-300"
               >
-                <div className="grid lg:grid-cols-[1fr_1fr] gap-10 items-start">
-                  <div>
-                    <div className="inline-flex items-center gap-2 bg-red-accent/10 border border-red-accent/30 rounded-full px-4 py-1.5 mb-5">
-                      <BookOpen className="w-4 h-4 text-red-accent" />
-                      <span className="text-xs font-body text-red-accent tracking-widest uppercase font-medium">
-                        {8} Aulas
-                      </span>
-                    </div>
-                    <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight">
-                      {course.title}
-                    </h2>
-                    <p className="font-body text-muted-foreground leading-relaxed mb-8">
-                      {course.description}
-                    </p>
-                    <Button variant="gold" size="lg" className="text-base" asChild>
-                      <a
-                        href={getWhatsAppUrl(course.whatsappMessage)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Saiba Mais
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </a>
-                    </Button>
-                  </div>
-
-                  <div className="space-y-3">
-                    <p className="font-display text-sm font-semibold text-foreground mb-4 tracking-wide uppercase">
-                      Programa do Curso
-                    </p>
-                    {course.lessons.map((lesson, li) => (
-                      <div
-                        key={li}
-                        className="flex items-center gap-3 p-3 rounded-lg bg-background border border-border/50 hover:border-gold/30 transition-colors"
-                      >
-                        <div className="w-7 h-7 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                          <Play className="w-3 h-3 text-gold" />
-                        </div>
-                        <span className="font-body text-sm text-foreground/80">
-                          <span className="text-gold font-medium mr-2">
-                            Aula {li + 1}
-                          </span>
-                          {lesson}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                <div className="inline-flex items-center gap-2 bg-red-accent/10 border border-red-accent/30 rounded-full px-4 py-1.5 mb-5">
+                  <BookOpen className="w-4 h-4 text-red-accent" />
+                  <span className="text-xs font-body text-red-accent tracking-widest uppercase font-medium">
+                    8 Aulas
+                  </span>
                 </div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight">
+                  {course.title}
+                </h2>
+                <p className="font-body text-muted-foreground leading-relaxed mb-8">
+                  {course.description}
+                </p>
+                <Button variant="gold" size="lg" className="text-base" asChild>
+                  <a
+                    href={getWhatsAppUrl(course.whatsappMessage)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Saiba Mais
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </a>
+                </Button>
               </motion.div>
             ))}
           </div>
