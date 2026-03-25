@@ -17,6 +17,10 @@ import MentoriaDashboard from "./pages/MentoriaDashboard";
 import MentoriaAdmin from "./pages/MentoriaAdmin";
 import MentoriaSetPassword from "./pages/MentoriaSetPassword";
 import QuemSomos from "./pages/QuemSomos";
+import Cursos from "./pages/Cursos";
+import ServicosPage from "./pages/Servicos";
+import DepoimentosPage from "./pages/Depoimentos";
+import ContatoPage from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 import StyleGuide from "./pages/StyleGuide";
 
@@ -31,7 +35,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/quem-somos" element={<QuemSomos />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/servicos" element={<ServicosPage />} />
+          <Route path="/depoimentos" element={<DepoimentosPage />} />
+          <Route path="/contato" element={<ContatoPage />} />
+          <Route path="/cursos" element={<Cursos />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
           <Route path="/politica-de-cookies" element={<PoliticaCookies />} />
