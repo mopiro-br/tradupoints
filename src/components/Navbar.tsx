@@ -25,11 +25,19 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md border-b border-gold/10">
       <nav className="container mx-auto flex items-center justify-between h-16 px-6 lg:px-12">
-        <a href="#" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img src={logoHorizontal} alt="Tradupoints" className="h-8" />
-        </a>
+        </Link>
 
         <ul className="hidden lg:flex items-center gap-8">
+          <li>
+            <Link
+              to="/"
+              className="text-sm font-body tracking-wide text-muted/80 hover:text-gold transition-colors duration-300"
+            >
+              Início
+            </Link>
+          </li>
           {navItems.map((item) => (
             <li key={item.href}>
               <Link
@@ -66,6 +74,15 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
             className="lg:hidden bg-navy border-t border-gold/10"
           >
             <ul className="flex flex-col p-6 gap-4">
+              <li>
+                <Link
+                  to="/"
+                  onClick={() => setOpen(false)}
+                  className="text-sm font-body text-muted/80 hover:text-gold transition-colors"
+                >
+                  Início
+                </Link>
+              </li>
               {navItems.map((item) => (
                 <li key={item.href}>
                   <Link
