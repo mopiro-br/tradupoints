@@ -47,7 +47,7 @@ const Differentials = () => {
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-background">
             Quando o evento não admite{" "}
-            <span className="text-gradient-gold">margem para erro</span>
+            <span className="text-gradient-gold">soluções comuns</span>
           </h2>
         </motion.div>
 

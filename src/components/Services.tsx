@@ -63,8 +63,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
             Nossos Serviços
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-            Expertise que vai além da{" "}
-            <span className="text-gradient-gold">tradução literal</span>
+            Expertise que vai além da
           </h2>
         </motion.div>
 
