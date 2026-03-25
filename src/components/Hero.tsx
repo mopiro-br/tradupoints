@@ -54,7 +54,7 @@ const Hero = ({ onRequestQuote }: HeroProps) => {
             className="flex flex-col sm:flex-row gap-4"
           >
             <Button variant="gold" size="lg" className="text-base px-10" onClick={onRequestQuote}>
-              Solicitar Orçamento
+              Solicitar Proposta
               <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
           </motion.div>

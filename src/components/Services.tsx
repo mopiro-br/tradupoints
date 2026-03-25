@@ -109,11 +109,9 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                   </li>
                 ))}
               </ul>
-              <Button variant="gold" size="lg" className="text-base" asChild>
-                <a href={getWhatsAppUrl("Olá! Gostaria de saber mais sobre tradução simultânea para meu evento.")} target="_blank" rel="noopener noreferrer">
-                  Fale Com Nossa Equipe
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </a>
+              <Button variant="gold" size="lg" className="text-base" onClick={onRequestQuote}>
+                Fale Com Nossa Equipe
+                <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
             </div>
             <div className="hidden lg:flex items-center justify-center">

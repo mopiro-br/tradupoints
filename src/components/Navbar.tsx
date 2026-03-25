@@ -7,12 +7,12 @@ import logoHorizontal from "@/assets/logo-horizontal.png";
 
 const navItems = [
   { label: "Quem Somos", href: "/quem-somos" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Diferenciais", href: "#diferenciais" },
-  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Serviços", href: "/servicos" },
+  { label: "Depoimentos", href: "/depoimentos" },
   { label: "Blog", href: "/blog" },
+  { label: "Cursos", href: "/cursos" },
   { label: "Mentoria", href: "/mentoria/login" },
-  { label: "Contato", href: "#contato" },
+  { label: "Contato", href: "/contato" },
 ];
 
 interface NavbarProps {
@@ -32,25 +32,19 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
         <ul className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a
-                href={item.href.startsWith("#") ? item.href : undefined}
-                onClick={(e) => {
-                  if (!item.href.startsWith("#")) {
-                    e.preventDefault();
-                    window.location.href = item.href;
-                  }
-                }}
+              <Link
+                to={item.href}
                 className="text-sm font-body tracking-wide text-muted/80 hover:text-gold transition-colors duration-300"
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className="hidden lg:block">
           <Button variant="gold" size="sm" onClick={onRequestQuote}>
-            Solicitar Orçamento
+            Solicitar Proposta
           </Button>
         </div>
 
@@ -74,24 +68,18 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
             <ul className="flex flex-col p-6 gap-4">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <a
-                    href={item.href.startsWith("#") ? item.href : undefined}
-                    onClick={(e) => {
-                      setOpen(false);
-                      if (!item.href.startsWith("#")) {
-                        e.preventDefault();
-                        window.location.href = item.href;
-                      }
-                    }}
+                  <Link
+                    to={item.href}
+                    onClick={() => setOpen(false)}
                     className="text-sm font-body text-muted/80 hover:text-gold transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>
                 <Button variant="gold" size="sm" className="w-full mt-2" onClick={() => { setOpen(false); onRequestQuote(); }}>
-                  Solicitar Orçamento
+                  Solicitar Proposta
                 </Button>
               </li>
             </ul>
