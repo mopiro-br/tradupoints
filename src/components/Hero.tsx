@@ -44,9 +44,7 @@ const Hero = ({ onRequestQuote }: HeroProps) => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl text-muted/70 font-body font-light max-w-2xl mb-10 leading-relaxed"
           >
-            Transformamos desafios multilíngues em comunicação clara, precisa e
-            contextualizada — para que você se concentre no conteúdo e na
-            experiência do seu evento.
+            Transformamos desafios multilíngues em comunicação clara, precisa e contextualizada.&nbsp;
           </motion.p>
 
           <motion.div
