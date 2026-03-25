@@ -35,7 +35,7 @@ const CTASection = ({ onRequestQuote }: CTASectionProps) => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="gold" size="lg" className="text-base px-12" onClick={onRequestQuote}>
-              Solicitar Orçamento
+              Fale conosco
               <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
           </div>
