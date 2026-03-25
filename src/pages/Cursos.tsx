@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BookOpen, Play, ArrowRight } from "lucide-react";
+import { BookOpen, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
