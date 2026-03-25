@@ -30,14 +30,6 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
         </Link>
 
         <ul className="hidden lg:flex items-center gap-8">
-          <li>
-            <Link
-              to="/"
-              className="text-sm font-body tracking-wide text-muted/80 hover:text-gold transition-colors duration-300"
-            >
-              Início
-            </Link>
-          </li>
           {navItems.map((item) => (
             <li key={item.href}>
               <Link
@@ -74,15 +66,6 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
             className="lg:hidden bg-navy border-t border-gold/10"
           >
             <ul className="flex flex-col p-6 gap-4">
-              <li>
-                <Link
-                  to="/"
-                  onClick={() => setOpen(false)}
-                  className="text-sm font-body text-muted/80 hover:text-gold transition-colors"
-                >
-                  Início
-                </Link>
-              </li>
               {navItems.map((item) => (
                 <li key={item.href}>
                   <Link
