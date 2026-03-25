@@ -7,12 +7,12 @@ import logoHorizontal from "@/assets/logo-horizontal.png";
 
 const navItems = [
   { label: "Quem Somos", href: "/quem-somos" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Diferenciais", href: "#diferenciais" },
-  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Serviços", href: "/servicos" },
+  { label: "Depoimentos", href: "/depoimentos" },
   { label: "Blog", href: "/blog" },
+  { label: "Cursos", href: "/cursos" },
   { label: "Mentoria", href: "/mentoria/login" },
-  { label: "Contato", href: "#contato" },
+  { label: "Contato", href: "/contato" },
 ];
 
 interface NavbarProps {
@@ -50,7 +50,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
 
         <div className="hidden lg:block">
           <Button variant="gold" size="sm" onClick={onRequestQuote}>
-            Solicitar Orçamento
+            Solicitar Proposta
           </Button>
         </div>
 
@@ -91,7 +91,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
               ))}
               <li>
                 <Button variant="gold" size="sm" className="w-full mt-2" onClick={() => { setOpen(false); onRequestQuote(); }}>
-                  Solicitar Orçamento
+                  Solicitar Proposta
                 </Button>
               </li>
             </ul>
