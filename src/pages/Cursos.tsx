@@ -42,7 +42,7 @@ const Cursos = () => {
             className="text-center max-w-3xl mx-auto"
           >
             <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-4">
-              Formação Profissional
+              Aprimoramento Profissional
             </p>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-6">
               Cursos para{" "}
