@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Plus } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -42,22 +43,21 @@ const faqItems = [
 const AISolutionsFAQ = () => {
   return (
     <section id="faq-ia" className="section-padding bg-background">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-10"
         >
-          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">
-            Dúvidas Frequentes
+          <p className="text-gold font-body text-xs tracking-[0.25em] uppercase mb-3">
+            Transparência
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-            Legendas e transcrição com IA:{" "}
-            <span className="text-gradient-gold">transparência</span>
+          <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
+            Dúvidas Frequentes
           </h2>
-          <p className="font-body text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Esclarecemos limitações, qualidade, latência e cuidados com dados para que você escolha com segurança.
+          <p className="font-body text-sm text-muted-foreground mt-3 max-w-xl mx-auto">
+            Esclarecemos limitações, qualidade, latência e cuidados com dados sobre legendas automáticas e transcrição via app.
           </p>
         </motion.div>
 
@@ -67,18 +67,38 @@ const AISolutionsFAQ = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full border-y border-border">
             {faqItems.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-border">
-                <AccordionTrigger className="font-display text-base md:text-lg font-semibold text-foreground text-left hover:text-red-accent hover:no-underline">
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border-border"
+              >
+                <AccordionTrigger
+                  icon={<Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />}
+                  className="font-display text-sm md:text-base font-medium text-foreground text-left py-5 hover:text-gold hover:no-underline gap-4"
+                >
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
+                <AccordionContent className="font-body text-sm text-muted-foreground leading-relaxed">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
+
+          <div className="mt-10 text-center">
+            <p className="font-body text-sm text-muted-foreground">
+              Ainda tem dúvidas?{" "}
+              <a
+                href="mailto:comercial@tradupoints.com.br"
+                className="text-gold hover:text-foreground transition-colors underline-offset-4 hover:underline"
+              >
+                Fale com nosso time
+              </a>
+              .
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
