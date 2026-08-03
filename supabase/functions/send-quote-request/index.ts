@@ -84,7 +84,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "Tradupoints <onboarding@resend.dev>",
-        to: ["vendas@tradupoints.com.br"],
+        to: ["comercial@tradupoints.com.br"],
         subject: "Form: orçamento",
         html: htmlBody,
         reply_to: data.email.trim(),
