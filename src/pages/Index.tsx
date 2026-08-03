@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import AISolutionsFAQ from "@/components/AISolutionsFAQ";
 import Differentials from "@/components/Differentials";
 import SocialProof from "@/components/SocialProof";
 import BlogPodcast from "@/components/BlogPodcast";
@@ -20,6 +21,7 @@ const Index = () => {
       <Navbar onRequestQuote={() => setContactOpen(true)} />
       <Hero onRequestQuote={() => setContactOpen(true)} />
       <Services onRequestQuote={() => setContactOpen(true)} />
+      <AISolutionsFAQ />
       <Differentials />
       <SocialProof />
       <CTASection onRequestQuote={() => setContactOpen(true)} />
