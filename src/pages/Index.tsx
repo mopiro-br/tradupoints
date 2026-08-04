@@ -20,8 +20,9 @@ const Index = () => {
     <main className="min-h-screen">
       <Navbar onRequestQuote={() => setContactOpen(true)} />
       <Hero onRequestQuote={() => setContactOpen(true)} />
-      <Services onRequestQuote={() => setContactOpen(true)} />
       <Differentials />
+      <Services onRequestQuote={() => setContactOpen(true)} />
+
       <SocialProof />
       <CTASection onRequestQuote={() => setContactOpen(true)} />
       <BlogPodcast />
