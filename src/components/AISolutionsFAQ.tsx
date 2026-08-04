@@ -62,7 +62,7 @@ const faqItems = [
 
 const AISolutionsFAQ = () => {
   return (
-    <section id="faq-ia" className="section-padding bg-background">
+    <section id="faq" className="section-padding bg-background">
       <div className="container mx-auto max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,7 +77,7 @@ const AISolutionsFAQ = () => {
             Dúvidas Frequentes
           </h2>
           <p className="font-body text-sm text-muted-foreground mt-3 max-w-xl mx-auto">
-            Esclarecemos limitações, qualidade, latência e cuidados com dados sobre legendas automáticas e transcrição via app.
+            Prazos, equipe, equipamentos, eventos online, tradução escrita, investimento e cuidados com dados e IA.
           </p>
         </motion.div>
 
