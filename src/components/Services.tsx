@@ -132,6 +132,62 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
           </div>
         </motion.div>
 
+        {/* Outras soluções para empresas e eventos */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative bg-card border border-border rounded-2xl p-6 sm:p-8 md:p-12 mb-16 overflow-hidden hover:border-gold/30 transition-colors duration-300"
+        >
+          <div className="absolute bottom-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl translate-y-1/3 translate-x-1/3" />
+
+          <div className="relative z-10">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 leading-tight">
+              Outras soluções para empresas e eventos
+            </h3>
+            <p className="font-body text-muted-foreground leading-relaxed max-w-3xl mb-8">
+              Serviços que completam a experiência multilíngue do seu evento,
+              desde a preparação de materiais até a sonorização e condução do palco.
+              Tudo integrado para que você tenha apenas um ponto de contato.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {otherServices.map((item, i) => (
+                <motion.div
+                  key={item.title}
+                  custom={i}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="group flex flex-col md:flex-row gap-4 md:gap-5 p-6 rounded-xl border border-border bg-background hover:border-red-accent/50 transition-all duration-300"
+                >
+                  <item.icon
+                    className="w-8 h-8 flex-shrink-0 text-gold/70 group-hover:text-red-accent transition-colors duration-300 mb-2 md:mb-0"
+                    strokeWidth={1.5}
+                  />
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-display text-base font-semibold text-foreground mb-1.5">
+                      {item.title}
+                    </h4>
+                    <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <Button variant="gold-outline" size="lg" className="text-base w-full sm:w-auto" onClick={onRequestQuote}>
+                Solicitar Proposta
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </Button>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Comunicação Aumentada por IA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -197,62 +253,6 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                 >
                   <item.icon
                     className="w-8 h-8 flex-shrink-0 text-gold/70 group-hover:text-red-accent transition-colors duration-300"
-                    strokeWidth={1.5}
-                  />
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-display text-base font-semibold text-foreground mb-1.5">
-                      {item.title}
-                    </h4>
-                    <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="mt-8">
-              <Button variant="gold-outline" size="lg" className="text-base w-full sm:w-auto" onClick={onRequestQuote}>
-                Solicitar Proposta
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </Button>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Outras soluções para empresas e eventos */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative bg-card border border-border rounded-2xl p-6 sm:p-8 md:p-12 mb-16 overflow-hidden hover:border-gold/30 transition-colors duration-300"
-        >
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl translate-y-1/3 translate-x-1/3" />
-
-          <div className="relative z-10">
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 leading-tight">
-              Outras soluções para empresas e eventos
-            </h3>
-            <p className="font-body text-muted-foreground leading-relaxed max-w-3xl mb-8">
-              Serviços que completam a experiência multilíngue do seu evento,
-              desde a preparação de materiais até a sonorização e condução do palco.
-              Tudo integrado para que você tenha apenas um ponto de contato.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {otherServices.map((item, i) => (
-                <motion.div
-                  key={item.title}
-                  custom={i}
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  className="group flex flex-col md:flex-row gap-4 md:gap-5 p-6 rounded-xl border border-border bg-background hover:border-red-accent/50 transition-all duration-300"
-                >
-                  <item.icon
-                    className="w-8 h-8 flex-shrink-0 text-gold/70 group-hover:text-red-accent transition-colors duration-300 mb-2 md:mb-0"
                     strokeWidth={1.5}
                   />
                   <div className="flex-1 min-w-0">

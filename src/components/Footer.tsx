@@ -61,15 +61,16 @@ const Footer = () => {
             <ul className="space-y-2">
               {[
                 "Tradução Simultânea",
+                "Outras Soluções para Eventos",
+                "Comunicação Aumentada por IA",
                 "Tradução Escrita",
                 "Transcrição",
                 "Tecnologia BYOD",
-                "Sonorização & DJ",
                 "Mentoria para Intérpretes",
               ].map((s) => (
                 <li key={s}>
                   <a
-                    href="#servicos"
+                    href="/servicos"
                     className="font-body text-sm text-muted/50 hover:text-gold transition-colors"
                   >
                     {s}
@@ -85,14 +86,23 @@ const Footer = () => {
               Conteúdo
             </h4>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="/blog"
-                  className="font-body text-sm text-muted/50 hover:text-gold transition-colors"
-                >
-                  Blog
-                </a>
-              </li>
+              {[
+                { label: "Quem Somos", href: "/quem-somos" },
+                { label: "Depoimentos", href: "/depoimentos" },
+                { label: "Blog", href: "/blog" },
+                { label: "Cursos", href: "/cursos" },
+                { label: "Dúvidas Frequentes", href: "/#faq" },
+                { label: "Contato", href: "/contato" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    className="font-body text-sm text-muted/50 hover:text-gold transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
