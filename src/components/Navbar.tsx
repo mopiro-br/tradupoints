@@ -62,12 +62,13 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md border-b border-gold/10">
-      <nav className="container mx-auto flex items-center justify-between h-16 px-6 lg:px-12">
-        <Link to="/" className="flex items-center">
+      <nav className="container mx-auto flex items-center justify-between gap-4 h-16 px-6 lg:px-6 xl:px-12">
+        <Link to="/" className="flex items-center shrink-0">
           <img src={logoHorizontal} alt="Tradupoints" className="h-8" />
         </Link>
 
-        <ul className="hidden lg:flex items-center gap-8">
+        <ul className="hidden xl:flex items-center gap-6">
+
           {navItems.map((item) => {
             const linkHref = isHome && item.anchor ? `#${item.anchor}` : item.href;
             const active = isActive(item);
@@ -78,7 +79,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
                   <a
                     href={linkHref}
                     onClick={handleAnchorClick(item.anchor)}
-                    className={`text-sm font-body tracking-wide transition-colors duration-300 ${
+                    className={`text-sm font-body tracking-wide whitespace-nowrap transition-colors duration-300 ${
                       active ? "text-gold" : "text-muted/80 hover:text-gold"
                     }`}
                   >
@@ -87,7 +88,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
                 ) : (
                   <Link
                     to={item.href}
-                    className={`text-sm font-body tracking-wide transition-colors duration-300 ${
+                    className={`text-sm font-body tracking-wide whitespace-nowrap transition-colors duration-300 ${
                       active ? "text-gold" : "text-muted/80 hover:text-gold"
                     }`}
                   >
@@ -99,7 +100,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
           })}
         </ul>
 
-        <div className="hidden lg:block">
+        <div className="hidden xl:block shrink-0">
           <Button variant="gold" size="sm" onClick={onRequestQuote}>
             Solicitar Proposta
           </Button>
@@ -107,7 +108,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
 
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden text-gold"
+          className="xl:hidden text-gold"
           aria-label="Menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -120,7 +121,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-navy border-t border-gold/10"
+            className="xl:hidden bg-navy border-t border-gold/10"
           >
             <ul className="flex flex-col p-6 gap-4">
               {navItems.map((item) => {

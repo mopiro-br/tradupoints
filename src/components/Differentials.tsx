@@ -51,7 +51,7 @@ const Differentials = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
           {items.map((item, i) => (
             <motion.div
               key={item.title}
@@ -59,16 +59,16 @@ const Differentials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group relative flex items-start gap-5 md:block md:text-center p-5 md:p-6 rounded-xl border border-gold/10 bg-background/5 backdrop-blur-sm hover:bg-background/10 hover:border-gold/30 transition-all duration-300"
+              className="group relative flex items-start gap-5 sm:block sm:text-center p-5 md:p-6 rounded-xl border border-gold/10 bg-background/5 backdrop-blur-sm hover:bg-background/10 hover:border-gold/30 transition-all duration-300"
             >
-              <div className="shrink-0 w-12 h-12 md:w-16 md:h-16 md:mx-auto md:mb-6 rounded-full border border-gold/30 flex items-center justify-center group-hover:bg-red-accent/10 transition-colors duration-300">
-                <item.icon className="w-6 h-6 md:w-7 md:h-7 text-gold group-hover:text-red-accent transition-colors duration-300" strokeWidth={1.5} />
+              <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 sm:mx-auto sm:mb-5 rounded-full border border-gold/30 flex items-center justify-center group-hover:bg-red-accent/10 transition-colors duration-300">
+                <item.icon className="w-6 h-6 text-gold group-hover:text-red-accent transition-colors duration-300" strokeWidth={1.5} />
               </div>
-              <div className="min-w-0">
-                <h3 className="font-display text-lg font-semibold text-background mb-2 md:mb-3">
+              <div className="min-w-0 w-full">
+                <h3 className="font-display text-base md:text-lg font-semibold text-background mb-2 md:mb-3 break-words hyphens-auto">
                   {item.title}
                 </h3>
-                <p className="font-body text-sm md:text-base text-background/80 leading-relaxed">
+                <p className="font-body text-sm md:text-[0.95rem] text-background/80 leading-relaxed break-words hyphens-auto">
                   {item.description}
                 </p>
               </div>
