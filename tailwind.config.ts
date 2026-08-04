@@ -62,6 +62,8 @@ export default {
           dark: "hsl(var(--navy-dark))",
         },
         "red-accent": "hsl(var(--red-accent))",
+        "on-navy": "hsl(var(--on-navy))",
+
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
