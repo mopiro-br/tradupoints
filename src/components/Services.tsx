@@ -181,7 +181,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                   icon: AudioLines,
                   title: "Transcrição Automática em Tempo Real via App",
                   description:
-                    "Transcrição do áudio do evento gerada automaticamente durante a sessão, entregue como documento editável, indexado e com marcação de tempo.",
+                    "Transcrição do áudio do evento gerada automaticamente durante a sessão.",
                 },
               ].map((item, i) => (
                 <motion.div
