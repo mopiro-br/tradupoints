@@ -21,11 +21,11 @@ const Index = () => {
       <Navbar onRequestQuote={() => setContactOpen(true)} />
       <Hero onRequestQuote={() => setContactOpen(true)} />
       <Services onRequestQuote={() => setContactOpen(true)} />
-      <AISolutionsFAQ />
       <Differentials />
       <SocialProof />
       <CTASection onRequestQuote={() => setContactOpen(true)} />
       <BlogPodcast />
+      <AISolutionsFAQ />
       
       <Footer />
       <LGPDNotice />
