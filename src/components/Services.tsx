@@ -238,7 +238,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
               Tudo integrado para que você tenha apenas um ponto de contato.
             </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {otherServices.map((item, i) => (
                 <motion.div
                   key={item.title}
@@ -247,13 +247,13 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="group flex gap-4 p-6 rounded-xl border border-border bg-background hover:border-red-accent/50 transition-all duration-300"
+                  className="group flex flex-col md:flex-row gap-4 md:gap-5 p-6 rounded-xl border border-border bg-background hover:border-red-accent/50 transition-all duration-300"
                 >
                   <item.icon
-                    className="w-8 h-8 flex-shrink-0 text-gold/70 group-hover:text-red-accent transition-colors duration-300"
+                    className="w-8 h-8 flex-shrink-0 text-gold/70 group-hover:text-red-accent transition-colors duration-300 mb-2 md:mb-0"
                     strokeWidth={1.5}
                   />
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h4 className="font-display text-base font-semibold text-foreground mb-1.5">
                       {item.title}
                     </h4>
