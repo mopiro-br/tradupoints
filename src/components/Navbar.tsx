@@ -67,7 +67,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
           <img src={logoHorizontal} alt="Tradupoints" className="h-8" />
         </Link>
 
-        <ul className="hidden lg:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-4 xl:gap-8">
           {navItems.map((item) => {
             const linkHref = isHome && item.anchor ? `#${item.anchor}` : item.href;
             const active = isActive(item);
