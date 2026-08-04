@@ -67,7 +67,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
           <img src={logoHorizontal} alt="Tradupoints" className="h-8" />
         </Link>
 
-        <ul className="hidden lg:flex items-center gap-4 xl:gap-8">
+        <ul className="hidden xl:flex items-center gap-6">
 
           {navItems.map((item) => {
             const linkHref = isHome && item.anchor ? `#${item.anchor}` : item.href;
@@ -100,7 +100,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
           })}
         </ul>
 
-        <div className="hidden lg:block shrink-0">
+        <div className="hidden xl:block shrink-0">
           <Button variant="gold" size="sm" onClick={onRequestQuote}>
             Solicitar Proposta
           </Button>
@@ -108,7 +108,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
 
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden text-gold"
+          className="xl:hidden text-gold"
           aria-label="Menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -121,7 +121,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-navy border-t border-gold/10"
+            className="xl:hidden bg-navy border-t border-gold/10"
           >
             <ul className="flex flex-col p-6 gap-4">
               {navItems.map((item) => {
