@@ -10,7 +10,8 @@ interface HeroProps {
 
 const Hero = ({ onRequestQuote }: HeroProps) => {
   return (
-    <section className="relative h-[75vh] flex items-center justify-center overflow-hidden">
+    <section id="inicio" className="relative h-[75vh] flex items-center justify-center overflow-hidden">
+
       <div className="absolute inset-0">
         <img src={heroBg} alt="" className="w-full h-full object-cover object-right" loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/90 to-navy/75" />
