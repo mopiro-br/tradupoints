@@ -11,7 +11,7 @@ const faqItems = [
   {
     question: "As legendas automáticas e a transcrição por IA são 100% fiéis ao conteúdo original?",
     answer:
-      "Não. A tecnologia de IA oferece um excelente nível de qualidade, mas ainda pode cometer erros em nomes próprios, siglas, termos técnicos, números, ironias e contextos de baixa audibilidade. Por isso, oferecemos a revisão humana como etapa recomendada — especialmente para eventos médicos, científicos e jurídicos — e orientamos o cliente sobre o cenário mais adequado às suas necessidades.",
+      "Não. A tecnologia de IA oferece um excelente nível de qualidade, mas ainda pode cometer erros em nomes próprios, siglas, termos técnicos, números, ironias e contextos de baixa audibilidade. Por isso, oferecemos a revisão humana como etapa recomendada, especialmente para eventos médicos, científicos e jurídicos, e orientamos o cliente sobre o cenário mais adequado às suas necessidades.",
   },
   {
     question: "Existe algum atraso (latência) na geração das legendas em tempo real?",

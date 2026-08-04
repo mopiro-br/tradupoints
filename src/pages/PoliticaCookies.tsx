@@ -68,11 +68,11 @@ const PoliticaCookies = () => {
                 </p>
                 <ul className="list-disc pl-6 space-y-1 mt-2">
                   <li>
-                    <strong>Google Analytics 4</strong> — mede o tráfego do site, páginas mais
+                    <strong>Google Analytics 4</strong>: mede o tráfego do site, páginas mais
                     visitadas e comportamento de navegação
                   </li>
                   <li>
-                    <strong>Google Tag Manager</strong> — gerencia de forma centralizada os scripts
+                    <strong>Google Tag Manager</strong>: gerencia de forma centralizada os scripts
                     e tags do site
                   </li>
                 </ul>
@@ -89,15 +89,15 @@ const PoliticaCookies = () => {
                 </p>
                 <ul className="list-disc pl-6 space-y-1 mt-2">
                   <li>
-                    <strong>Meta Pixel (Facebook)</strong> — rastreia conversões e permite
+                    <strong>Meta Pixel (Facebook)</strong>: rastreia conversões e permite
                     remarketing em plataformas Meta
                   </li>
                   <li>
-                    <strong>LinkedIn Insight Tag</strong> — mede conversões e permite segmentação
+                    <strong>LinkedIn Insight Tag</strong>: mede conversões e permite segmentação
                     de público profissional
                   </li>
                   <li>
-                    <strong>Google AdSense</strong> — exibe anúncios relevantes com base no perfil
+                    <strong>Google AdSense</strong>: exibe anúncios relevantes com base no perfil
                     de navegação
                   </li>
                 </ul>

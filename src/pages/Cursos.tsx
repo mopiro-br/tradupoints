@@ -17,7 +17,7 @@ const courses = [
       "Olá! Tenho interesse no curso Escritório Inteligente para Intérpretes. Gostaria de mais informações.",
   },
   {
-    title: "Ferramentas Tecnológicas — Um Kit para Intérpretes",
+    title: "Ferramentas Tecnológicas: Um Kit para Intérpretes",
     description:
       "Domine as ferramentas digitais essenciais para a interpretação moderna: plataformas, softwares de glossário, IA aplicada e recursos que elevam sua performance.",
     whatsappMessage:

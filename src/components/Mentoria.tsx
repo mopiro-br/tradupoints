@@ -66,7 +66,7 @@ const Mentoria = () => {
             </p>
             <div className="border-t border-gold/20 pt-6">
               <p className="text-xs text-gold/80 font-body tracking-widest uppercase">
-                Vagas Limitadas — Inscreva-se
+                Vagas Limitadas. Inscreva-se
               </p>
             </div>
           </motion.div>

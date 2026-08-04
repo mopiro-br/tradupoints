@@ -34,16 +34,16 @@ const AboutUs = () => {
             className="space-y-6 text-center"
           >
             <p className="font-body text-lg md:text-xl text-foreground/80 leading-relaxed">
-              A <span className="text-gold font-semibold">Tradupoints</span> nasceu da convicção de que a comunicação multilíngue em eventos de alta complexidade exige muito mais do que fluência — exige{" "}
+              A <span className="text-gold font-semibold">Tradupoints</span> nasceu da convicção de que a comunicação multilíngue em eventos de alta complexidade exige muito mais do que fluência. Exige{" "}
               <span className="italic">preparo técnico profundo</span>, domínio terminológico e uma compreensão genuína do contexto em que cada palavra será dita.
             </p>
 
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              Somos especialistas em tradução simultânea para congressos médicos, científicos e corporativos, onde a precisão não é um diferencial — é um requisito. Atuamos com elaboração de glossários personalizados, técnicas avançadas de interpretação e ferramentas tecnológicas de ponta, incluindo soluções BYOD que ampliam o alcance do seu evento sem comprometer a qualidade.
+              Somos especialistas em tradução simultânea para congressos médicos, científicos e corporativos, onde a precisão não é um diferencial, e sim um requisito. Atuamos com elaboração de glossários personalizados, técnicas avançadas de interpretação e ferramentas tecnológicas de ponta, incluindo soluções BYOD que ampliam o alcance do seu evento sem comprometer a qualidade.
             </p>
 
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              Mais do que traduzir palavras, contextualizamos ideias. Cada projeto começa com imersão no conteúdo, alinhamento com palestrantes e planejamento milimétrico — para que você e seus participantes vivam a experiência do evento sem barreiras linguísticas.
+              Mais do que traduzir palavras, contextualizamos ideias. Cada projeto começa com imersão no conteúdo, alinhamento com palestrantes e planejamento milimétrico, para que você e seus participantes vivam a experiência do evento sem barreiras linguísticas.
             </p>
 
             <div className="pt-6 border-t border-border/50 mt-8">

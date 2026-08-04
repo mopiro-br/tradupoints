@@ -11,46 +11,46 @@ type Meta = {
 
 const routes: Record<string, Meta> = {
   "/": {
-    title: "Tradupoints — Tradução simultânea para eventos médicos e técnicos",
+    title: "Tradupoints | Tradução simultânea para eventos médicos e técnicos",
     description:
       "Tradução simultânea, legendas automáticas e transcrição em tempo real para eventos médicos, científicos e corporativos. Parceira estratégica de agências e empresas.",
   },
   "/quem-somos": {
-    title: "Quem somos — Tradupoints",
+    title: "Quem somos | Tradupoints",
     description:
       "Conheça a Tradupoints: experiência em interpretação simultânea e soluções de comunicação multilíngue para eventos de alta complexidade.",
   },
   "/servicos": {
-    title: "Serviços de tradução e interpretação — Tradupoints",
+    title: "Serviços de tradução e interpretação | Tradupoints",
     description:
       "Interpretação simultânea e consecutiva, tradução simultânea por IA, legendas automáticas, closed caption em tela e transcrição em tempo real.",
   },
   "/depoimentos": {
-    title: "Depoimentos de clientes — Tradupoints",
+    title: "Depoimentos de clientes | Tradupoints",
     description:
       "Relatos de agências, empresas e organizadores de eventos sobre a atuação da Tradupoints em interpretação e comunicação multilíngue.",
   },
   "/contato": {
-    title: "Contato e proposta — Tradupoints",
+    title: "Contato e proposta | Tradupoints",
     description:
       "Fale com a Tradupoints e solicite uma proposta para tradução simultânea, legendagem automática ou transcrição do seu evento.",
   },
   "/cursos": {
-    title: "Cursos para intérpretes — Tradupoints",
+    title: "Cursos para intérpretes | Tradupoints",
     description:
       "Aprimoramento profissional para intérpretes: rotinas com IA, escritório inteligente e interfaces customizáveis criadas para a prática da interpretação.",
   },
   "/blog": {
-    title: "Blog sobre interpretação e tradução — Tradupoints",
+    title: "Blog sobre interpretação e tradução | Tradupoints",
     description:
       "Artigos sobre interpretação simultânea, tecnologia de legendagem, IA aplicada a eventos e boas práticas do mercado de tradução.",
   },
   "/politica-de-privacidade": {
-    title: "Política de Privacidade — Tradupoints",
+    title: "Política de Privacidade | Tradupoints",
     description: "Como a Tradupoints trata dados pessoais em conformidade com a LGPD.",
   },
   "/politica-de-cookies": {
-    title: "Política de Cookies — Tradupoints",
+    title: "Política de Cookies | Tradupoints",
     description: "Como a Tradupoints utiliza cookies e tecnologias de medição no site.",
   },
 };
@@ -70,7 +70,7 @@ const RouteSeo = () => {
   if (isPrivate || !meta) {
     return (
       <Helmet>
-        <title>{isPrivate ? "Área restrita — Tradupoints" : "Página não encontrada — Tradupoints"}</title>
+        <title>{isPrivate ? "Área restrita | Tradupoints" : "Página não encontrada | Tradupoints"}</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
     );
