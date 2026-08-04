@@ -236,7 +236,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
               </span>
             </div>
             <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 leading-tight">
-              Outras soluções para empresas e eventos
+              Serviços que integram seu evento
             </h3>
             <p className="font-body text-muted-foreground leading-relaxed max-w-3xl mb-8">
               Serviços que completam a experiência multilingual do seu evento,
