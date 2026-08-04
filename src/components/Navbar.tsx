@@ -100,7 +100,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
           })}
         </ul>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:block shrink-0">
           <Button variant="gold" size="sm" onClick={onRequestQuote}>
             Solicitar Proposta
           </Button>
