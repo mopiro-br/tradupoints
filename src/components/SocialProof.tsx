@@ -64,9 +64,9 @@ const testimonials = [
   },
   {
     quote:
-      "Nunca vimos uma equipe tão preparada e discreta. O evento superou nossas expectativas — a expertise técnica e o profissionalismo elevaram a qualidade a outro nível.",
+      "Nunca vimos uma equipe tão preparada e discreta. O evento superou nossas expectativas. A expertise técnica e o profissionalismo elevaram a qualidade a outro nível.",
     name: "Renata Albuquerque",
-    role: "Diretora de Eventos — Laboratório Farmacêutico Global",
+    role: "Diretora de Eventos, Laboratório Farmacêutico Global",
     stars: 5,
   },
   {
@@ -80,7 +80,7 @@ const testimonials = [
     quote:
       "Graças à Tradupoints, conseguimos superar barreiras linguísticas e culturais. A negociação fluiu com naturalidade e a parceria foi fechada com sucesso.",
     name: "Cláudio Monteiro",
-    role: "Coordenador de Projeto Internacional — Odontologia",
+    role: "Coordenador de Projeto Internacional, Odontologia",
     stars: 5,
   },
 ];

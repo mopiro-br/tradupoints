@@ -36,7 +36,7 @@ const otherServices = [
   {
     icon: Radio,
     title: "Palestra Silenciosa",
-    description: "Equipamentos de transmissão de última geração — tecnologia e discrição que elevam a experiência do participante.",
+    description: "Equipamentos de transmissão de última geração, com tecnologia e discrição que elevam a experiência do participante.",
   },
 ];
 
@@ -68,7 +68,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
           </h2>
         </motion.div>
 
-        {/* Hero Service — Tradução Simultânea */}
+        {/* Hero Service: Tradução Simultânea */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -152,7 +152,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
             </h3>
             <p className="font-body text-muted-foreground leading-relaxed max-w-3xl mb-8">
               Tecnologia integrada com propósito: recursos de IA que ampliam alcance,
-              acessibilidade e registro do seu evento — combinados, quando necessário,
+              acessibilidade e registro do seu evento, combinados, quando necessário,
               com interpretação humana, sempre com orientação técnica sobre a melhor
               composição para cada contexto.
             </p>
@@ -163,7 +163,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                   icon: Languages,
                   title: "Tradução Simultânea por IA",
                   description:
-                    "Interpretação simultânea conduzida por inteligência artificial, com áudio em tempo real no smartphone dos participantes — sem cabines nem receptores.",
+                    "Interpretação simultânea conduzida por inteligência artificial, com áudio em tempo real no smartphone dos participantes, sem cabines nem receptores.",
                 },
                 {
                   icon: Captions,
@@ -175,7 +175,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                   icon: MonitorPlay,
                   title: "Closed Caption Projetado em Tela",
                   description:
-                    "Captions ao vivo na tela de projeção ou nos monitores do evento — alta acessibilidade para participantes surdos, ensurdecidos ou em ambientes com áudio limitado.",
+                    "Captions ao vivo na tela de projeção ou nos monitores do evento, garantindo alta acessibilidade para participantes surdos, ensurdecidos ou em ambientes com áudio limitado.",
                 },
                 {
                   icon: AudioLines,

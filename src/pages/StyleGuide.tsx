@@ -105,17 +105,17 @@ const StyleGuide = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="font-display">Sora</CardTitle>
-                <CardDescription>Display / Títulos — font-display</CardDescription>
+                <CardDescription>Display / Títulos: font-display</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
                 <p className="font-display text-4xl font-bold text-foreground">Aa Bb Cc 123</p>
                 <p className="font-display text-xl font-semibold text-foreground">The quick brown fox</p>
                 <p className="font-display text-base font-medium text-muted-foreground">Pesos: 300 · 400 · 500 · 600 · 700 · 800</p>
                 <div className="space-y-1 pt-2">
-                  <p className="font-display text-3xl font-bold">H1 — 3xl Bold</p>
-                  <p className="font-display text-2xl font-bold">H2 — 2xl Bold</p>
-                  <p className="font-display text-xl font-semibold">H3 — xl Semibold</p>
-                  <p className="font-display text-lg font-semibold">H4 — lg Semibold</p>
+                  <p className="font-display text-3xl font-bold">H1: 3xl Bold</p>
+                  <p className="font-display text-2xl font-bold">H2: 2xl Bold</p>
+                  <p className="font-display text-xl font-semibold">H3: xl Semibold</p>
+                  <p className="font-display text-lg font-semibold">H4: lg Semibold</p>
                 </div>
               </CardContent>
             </Card>
@@ -123,16 +123,16 @@ const StyleGuide = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="font-display">Inter</CardTitle>
-                <CardDescription>Body / Texto corrido — font-body</CardDescription>
+                <CardDescription>Body / Texto corrido: font-body</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
                 <p className="font-body text-4xl font-bold text-foreground">Aa Bb Cc 123</p>
                 <p className="font-body text-xl font-medium text-foreground">The quick brown fox</p>
                 <p className="font-body text-base text-muted-foreground">Pesos: 300 · 400 · 500 · 600 · 700</p>
                 <div className="space-y-1 pt-2">
-                  <p className="font-body text-base">Body — base Regular</p>
-                  <p className="font-body text-sm text-muted-foreground">Small — sm Muted</p>
-                  <p className="font-body text-xs text-muted-foreground">Caption — xs Muted</p>
+                  <p className="font-body text-base">Body: base Regular</p>
+                  <p className="font-body text-sm text-muted-foreground">Small: sm Muted</p>
+                  <p className="font-body text-xs text-muted-foreground">Caption: xs Muted</p>
                 </div>
               </CardContent>
             </Card>
@@ -286,7 +286,7 @@ const StyleGuide = () => {
       {/* Footer */}
       <footer className="bg-navy py-8 text-center">
         <p className="font-body text-xs text-muted/40">
-          Guia de Identidade Visual — Tradupoints © {new Date().getFullYear()}
+          Guia de Identidade Visual | Tradupoints © {new Date().getFullYear()}
         </p>
       </footer>
     </div>

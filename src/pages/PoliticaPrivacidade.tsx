@@ -33,7 +33,7 @@ const PoliticaPrivacidade = () => {
               A <strong>Tradupoints</strong> ("nós", "nosso" ou "empresa"), comprometida com a
               transparência e a proteção dos dados pessoais de seus usuários, clientes e
               parceiros, apresenta esta Política de Privacidade em conformidade com a Lei
-              Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD) e demais
+              Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018, LGPD) e demais
               normas aplicáveis.
             </p>
             <p>

@@ -66,7 +66,7 @@ const BlogPostPage = () => {
   return (
     <main className="min-h-screen bg-background">
       <Helmet>
-        <title>{`${post.title} — Blog Tradupoints`}</title>
+        <title>{`${post.title} | Blog Tradupoints`}</title>
         <meta name="description" content={post.excerpt} />
         <link rel="canonical" href={canonical} />
         <meta property="og:type" content="article" />
