@@ -23,6 +23,7 @@ import DepoimentosPage from "./pages/Depoimentos";
 import ContatoPage from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 import StyleGuide from "./pages/StyleGuide";
+import RouteSeo from "./components/RouteSeo";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <RouteSeo />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/quem-somos" element={<QuemSomos />} />
