@@ -43,6 +43,9 @@
     --navy-light: 220 25% 30%;
     --navy-dark: 220 35% 15%;
     --red-accent: 5 70% 55%;
+    /* Texto claro fixo para superfícies navy (não muda entre temas) */
+    --on-navy: 220 15% 94%;
+
 
     --sidebar-background: 220 30% 22%;
     --sidebar-foreground: 220 15% 92%;
