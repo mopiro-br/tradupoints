@@ -74,9 +74,6 @@ const Differentials = () => {
               </div>
             </motion.div>
           ))}
-
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>
