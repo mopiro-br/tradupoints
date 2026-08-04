@@ -60,9 +60,40 @@ const BlogPostPage = () => {
     });
   };
 
+  const canonical = `https://tradupoints.com.br/blog/${post.slug}`;
+
   return (
     <main className="min-h-screen bg-background">
+      <Helmet>
+        <title>{`${post.title} — Blog Tradupoints`}</title>
+        <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Tradupoints" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={canonical} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.excerpt,
+            inLanguage: "pt-BR",
+            datePublished: post.created_at,
+            dateModified: post.updated_at,
+            mainEntityOfPage: canonical,
+            author: { "@type": "Organization", name: "Tradupoints" },
+            publisher: { "@type": "Organization", name: "Tradupoints" },
+          })}
+        </script>
+      </Helmet>
       <Navbar onRequestQuote={() => setContactOpen(true)} />
+
 
       <article className="pt-28 pb-20 px-6 lg:px-12">
         <div className="container mx-auto max-w-3xl">
