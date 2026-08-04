@@ -1,0 +1,40 @@
+# Tradupoints
+
+> Tradupoints é uma empresa brasileira de tradução simultânea e comunicação multilíngue para eventos médicos, científicos, técnicos e corporativos. Atua como parceira estratégica de agências e empresas, combinando interpretação humana com soluções de inteligência artificial.
+
+Site: https://tradupoints.com.br
+Idioma principal: português do Brasil (pt-BR). Atendimento também em inglês e espanhol.
+Contato comercial: formulário "Solicitar Proposta" no site e WhatsApp.
+
+## Serviços
+
+- Interpretação simultânea e consecutiva para eventos presenciais, híbridos e online.
+- Tradução simultânea por IA para sessões que exigem escala e custo reduzido.
+- Legendas automáticas em tempo real durante o evento.
+- Closed caption projetado em tela para acessibilidade do público presente.
+- Transcrição automática em tempo real via aplicativo, entregue como documento editável.
+- Tradução de documentos técnicos, científicos e corporativos.
+
+## Diferenciais
+
+- Especialização em conteúdo médico, científico e técnico de alta complexidade.
+- Confidencialidade absoluta: nomes de clientes e conteúdos de eventos não são divulgados.
+- Conformidade com a LGPD no tratamento de áudio, transcrições e dados de contato.
+- Revisão humana sobre saídas geradas por IA quando a precisão terminológica é crítica.
+
+## Páginas principais
+
+- [Início](https://tradupoints.com.br/): visão geral dos serviços e solicitação de proposta.
+- [Quem somos](https://tradupoints.com.br/quem-somos): posicionamento e experiência.
+- [Serviços](https://tradupoints.com.br/servicos): detalhamento de interpretação, legendagem e transcrição.
+- [Cursos](https://tradupoints.com.br/cursos): aprimoramento profissional para intérpretes, incluindo rotinas com IA.
+- [Depoimentos](https://tradupoints.com.br/depoimentos): relatos de clientes.
+- [Blog](https://tradupoints.com.br/blog): artigos sobre interpretação, tecnologia e mercado.
+- [Contato](https://tradupoints.com.br/contato): canais de atendimento e proposta.
+
+## Perguntas frequentes sobre IA aplicada a eventos
+
+- Legendas automáticas e transcrição em tempo real têm latência de poucos segundos e dependem da qualidade da conexão e do áudio.
+- Ruído ambiente, sotaques fortes e termos técnicos reduzem a precisão; revisão humana é recomendada em contextos críticos.
+- A IA não substitui a interpretação humana em eventos de alta complexidade ou sensibilidade.
+- Dados captados são usados apenas para a finalidade contratada, com prazos definidos de retenção e exclusão.
