@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Languages, FileText, Headphones, Music, Mic2, Radio, GraduationCap, Smartphone, ArrowRight, Sparkles, Captions, MonitorPlay, AudioLines } from "lucide-react";
+import { Languages, FileText, Headphones, Music, Mic2, Radio, GraduationCap, Smartphone, ArrowRight, Sparkles, Captions, MonitorPlay, AudioLines, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/components/WhatsAppButton";
 
@@ -218,42 +218,67 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
           </div>
         </motion.div>
 
-        {/* Other Services Grid */}
+        {/* Outras soluções para empresas e eventos */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          transition={{ duration: 0.6 }}
+          className="relative bg-card border border-border rounded-2xl p-8 md:p-12 mb-16 overflow-hidden hover:border-gold/30 transition-colors duration-300"
         >
-          <p className="font-body text-sm text-muted-foreground tracking-wide">
-            Soluções complementares que elevam a experiência do seu evento
-          </p>
-        </motion.div>
+          <div className="absolute bottom-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl translate-y-1/3 translate-x-1/3" />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {otherServices.map((service, i) => (
-            <motion.div
-              key={service.title}
-              custom={i}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="group p-7 rounded-xl border border-border bg-card hover:border-red-accent/50 hover:shadow-lg hover:shadow-red-accent/5 transition-all duration-300"
-            >
-              <service.icon
-                className="w-9 h-9 mb-4 text-gold/70 group-hover:text-red-accent transition-colors duration-300"
-                strokeWidth={1.5}
-              />
-              <h3 className="font-display text-lg font-semibold text-foreground mb-2">
-                {service.title}
-              </h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+          <div className="relative z-10">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <Building2 className="w-5 h-5 text-red-accent" />
+              <span className="text-xs font-body text-red-accent tracking-widest uppercase font-medium">
+                Soluções Complementares
+              </span>
+            </div>
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 leading-tight">
+              Outras soluções para empresas e eventos
+            </h3>
+            <p className="font-body text-muted-foreground leading-relaxed max-w-3xl mb-8">
+              Serviços que completam a experiência multilingual do seu evento,
+              desde a preparação de materiais até a sonorização e condução do palco.
+              Tudo integrado para que você tenha apenas um ponto de contato.
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {otherServices.map((item, i) => (
+                <motion.div
+                  key={item.title}
+                  custom={i}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="group flex gap-4 p-6 rounded-xl border border-border bg-background hover:border-red-accent/50 transition-all duration-300"
+                >
+                  <item.icon
+                    className="w-8 h-8 flex-shrink-0 text-gold/70 group-hover:text-red-accent transition-colors duration-300"
+                    strokeWidth={1.5}
+                  />
+                  <div>
+                    <h4 className="font-display text-base font-semibold text-foreground mb-1.5">
+                      {item.title}
+                    </h4>
+                    <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <Button variant="gold-outline" size="lg" className="text-base" onClick={onRequestQuote}>
+                Solicitar Proposta
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </Button>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Mentoria Highlight */}
         <motion.div
