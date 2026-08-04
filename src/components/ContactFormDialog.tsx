@@ -18,6 +18,12 @@ const contactSchema = z.object({
 
 type ContactForm = z.infer<typeof contactSchema>;
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 interface ContactFormDialogProps {
   open: boolean;
   onClose: () => void;
@@ -66,6 +72,16 @@ const ContactFormDialog = ({ open, onClose }: ContactFormDialogProps) => {
         body: result.data,
       });
       if (error) throw error;
+
+      // GA4: conversão de lead (somente em caso de sucesso)
+      if (typeof window !== "undefined" && typeof window.gtag === "function") {
+        window.gtag("event", "generate_lead", {
+          send_to: "G-2MLWN3DE9S",
+          event_category: "orcamento",
+        });
+        console.log("[GA4] evento generate_lead enviado");
+      }
+
       setSubmitted(true);
     } catch (err) {
       console.error("Error sending quote request:", err);
