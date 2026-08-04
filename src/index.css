@@ -151,3 +151,27 @@
     @apply px-6 py-20 md:px-12 lg:px-20 lg:py-28;
   }
 }
+
+/* Proteções contra o modo escuro forçado do navegador (Chrome Auto Dark, extensões) */
+@media (prefers-color-scheme: dark) {
+  :root,
+  html,
+  body {
+    color-scheme: light only;
+  }
+
+  /* Texto com gradiente vira cor sólida para nunca ficar invisível */
+  .text-gradient-gold {
+    background-image: none !important;
+    color: hsl(var(--gold)) !important;
+    -webkit-text-fill-color: hsl(var(--gold)) !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .text-gradient-gold {
+    background-image: none !important;
+    color: CanvasText !important;
+    -webkit-text-fill-color: CanvasText !important;
+  }
+}
