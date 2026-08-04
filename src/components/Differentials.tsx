@@ -45,7 +45,7 @@ const Differentials = () => {
             </p>
             <span className="w-8 h-0.5 bg-red-accent inline-block" />
           </div>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-background">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-on-navy">
             Quando o evento não admite{" "}
             <span className="text-gradient-gold">soluções comuns</span>
           </h2>
@@ -59,16 +59,16 @@ const Differentials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group relative flex items-start gap-5 sm:block sm:text-center p-5 md:p-6 rounded-xl border border-gold/10 bg-background/5 backdrop-blur-sm hover:bg-background/10 hover:border-gold/30 transition-all duration-300"
+              className="group relative flex items-start gap-5 sm:block sm:text-center p-5 md:p-6 rounded-xl border border-gold/10 bg-on-navy/5 backdrop-blur-sm hover:bg-on-navy/10 hover:border-gold/30 transition-all duration-300"
             >
               <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 sm:mx-auto sm:mb-5 rounded-full border border-gold/30 flex items-center justify-center group-hover:bg-red-accent/10 transition-colors duration-300">
                 <item.icon className="w-6 h-6 text-gold group-hover:text-red-accent transition-colors duration-300" strokeWidth={1.5} />
               </div>
               <div className="min-w-0 w-full">
-                <h3 className="font-display text-base md:text-lg font-semibold text-background mb-2 md:mb-3 break-words hyphens-auto">
+                <h3 className="font-display text-base md:text-lg font-semibold text-on-navy mb-2 md:mb-3 break-words hyphens-auto">
                   {item.title}
                 </h3>
-                <p className="font-body text-sm md:text-[0.95rem] text-background/80 leading-relaxed break-words hyphens-auto">
+                <p className="font-body text-sm md:text-[0.95rem] text-on-navy/80 leading-relaxed break-words hyphens-auto">
                   {item.description}
                 </p>
               </div>

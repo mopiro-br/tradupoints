@@ -24,11 +24,11 @@ const CTASection = ({ onRequestQuote }: CTASectionProps) => {
           <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-4">
             Vamos Conversar
           </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-6">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-navy mb-6">
             Seu próximo evento merece uma{" "}
             <span className="text-gradient-gold">parceira estratégica</span>
           </h2>
-          <p className="font-body text-muted/60 text-lg leading-relaxed mb-10">
+          <p className="font-body text-on-navy/60 text-lg leading-relaxed mb-10">
             Facilitamos seu foco no conteúdo e na experiência dos participantes
             enquanto cuidamos de cada detalhe da comunicação multilíngue com
             expertise técnica e preparo profundo.

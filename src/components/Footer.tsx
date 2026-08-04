@@ -47,7 +47,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <img src={logoHorizontal} alt="Tradupoints" className="h-7 mb-4" />
-            <p className="font-body text-sm text-muted/50 leading-relaxed">
+            <p className="font-body text-sm text-on-navy/50 leading-relaxed">
               Parceira estratégica em tradução simultânea para eventos médicos,
               científicos e técnicos de alta complexidade.
             </p>
@@ -55,7 +55,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-display text-sm font-semibold text-background mb-4">
+            <h4 className="font-display text-sm font-semibold text-on-navy mb-4">
               Serviços
             </h4>
             <ul className="space-y-2">
@@ -71,7 +71,7 @@ const Footer = () => {
                 <li key={s}>
                   <a
                     href="/servicos"
-                    className="font-body text-sm text-muted/50 hover:text-gold transition-colors"
+                    className="font-body text-sm text-on-navy/50 hover:text-gold transition-colors"
                   >
                     {s}
                   </a>
@@ -82,7 +82,7 @@ const Footer = () => {
 
           {/* Content */}
           <div>
-            <h4 className="font-display text-sm font-semibold text-background mb-4">
+            <h4 className="font-display text-sm font-semibold text-on-navy mb-4">
               Conteúdo
             </h4>
             <ul className="space-y-2">
@@ -97,7 +97,7 @@ const Footer = () => {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="font-body text-sm text-muted/50 hover:text-gold transition-colors"
+                    className="font-body text-sm text-on-navy/50 hover:text-gold transition-colors"
                   >
                     {item.label}
                   </a>
@@ -108,7 +108,7 @@ const Footer = () => {
 
           {/* Legal + Social */}
           <div>
-            <h4 className="font-display text-sm font-semibold text-background mb-4">
+            <h4 className="font-display text-sm font-semibold text-on-navy mb-4">
               Legal
             </h4>
             <ul className="space-y-2">
@@ -118,7 +118,7 @@ const Footer = () => {
                 "Política de Cookies",
               ].map((label) => (
                 <li key={label}>
-                  <span className="font-body text-sm text-muted/50">
+                  <span className="font-body text-sm text-on-navy/50">
                     {label}
                   </span>
                 </li>
@@ -134,7 +134,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center text-muted/40 hover:text-red-accent hover:border-red-accent/50 transition-all duration-300"
+                  className="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center text-on-navy/40 hover:text-red-accent hover:border-red-accent/50 transition-all duration-300"
                 >
                   {social.icon}
                 </a>
@@ -145,13 +145,13 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-gold/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-body text-xs text-muted/40">
+          <p className="font-body text-xs text-on-navy/40">
             © {new Date().getFullYear()} Tradupoints. Todos os direitos
             reservados. CNPJ: 26.144.460/0001-87
           </p>
           <a
             href="/admin/login"
-            className="font-body text-xs text-muted/20 hover:text-muted/40 transition-colors"
+            className="font-body text-xs text-on-navy/20 hover:text-on-navy/40 transition-colors"
           >
             Admin
           </a>

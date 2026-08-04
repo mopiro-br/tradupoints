@@ -57,10 +57,10 @@ const Mentoria = () => {
             className="bg-navy rounded-lg p-10 text-center"
           >
             <GraduationCap className="w-16 h-16 text-gold mx-auto mb-6" />
-            <h3 className="font-display text-2xl font-bold text-background mb-4">
+            <h3 className="font-display text-2xl font-bold text-on-navy mb-4">
               Programa de Mentoria
             </h3>
-            <p className="font-body text-muted/60 mb-8 leading-relaxed">
+            <p className="font-body text-on-navy/60 mb-8 leading-relaxed">
               Formação prática e teórica com profissionais experientes do
               mercado de interpretação de conferência.
             </p>

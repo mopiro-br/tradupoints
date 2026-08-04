@@ -37,16 +37,16 @@ const LGPDNotice = () => {
                 <Shield className="w-4 h-4 text-red-accent shrink-0" />
               </div>
               <div>
-                <h3 className="font-display text-sm font-semibold text-background mb-1">
+                <h3 className="font-display text-sm font-semibold text-on-navy mb-1">
                   Cookies & Privacidade
                 </h3>
-                <p className="font-body text-xs text-muted/60 leading-relaxed">
+                <p className="font-body text-xs text-on-navy/60 leading-relaxed">
                   Utilizamos cookies essenciais para o funcionamento do site e cookies analíticos
                   (Google Analytics, Meta Pixel, LinkedIn Insight) para melhorar sua experiência e
                   medir o desempenho das nossas campanhas. Ao aceitar, você concorda com o uso de
                   todos os cookies. Ao rejeitar, apenas cookies essenciais serão mantidos.
                 </p>
-                <p className="font-body text-xs text-muted/50 mt-2">
+                <p className="font-body text-xs text-on-navy/50 mt-2">
                   Em conformidade com a{" "}
                   <span className="text-gold">LGPD (Lei nº 13.709/2018)</span>. Saiba mais em nossa{" "}
                   <a href="/politica-de-privacidade" className="text-gold underline hover:text-red-accent transition-colors">

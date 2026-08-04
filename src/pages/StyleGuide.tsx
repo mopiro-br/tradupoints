@@ -32,7 +32,7 @@ const StyleGuide = () => {
           <h1 className="font-display text-4xl md:text-5xl font-bold text-gold mb-3">
             Guia de Identidade Visual
           </h1>
-          <p className="font-body text-muted/60 text-lg max-w-2xl mx-auto">
+          <p className="font-body text-on-navy/60 text-lg max-w-2xl mx-auto">
             Referência completa de cores, tipografias e componentes do site Tradupoints.
           </p>
         </div>
@@ -200,10 +200,10 @@ const StyleGuide = () => {
             <Card className="bg-navy text-gold border-gold/20">
               <CardHeader>
                 <CardTitle className="text-gold">Card Navy</CardTitle>
-                <CardDescription className="text-muted/60">Fundo navy com texto dourado.</CardDescription>
+                <CardDescription className="text-on-navy/60">Fundo navy com texto dourado.</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="font-body text-sm text-muted/50">Ideal para destaques e CTAs.</p>
+                <p className="font-body text-sm text-on-navy/50">Ideal para destaques e CTAs.</p>
               </CardContent>
             </Card>
 
@@ -285,7 +285,7 @@ const StyleGuide = () => {
 
       {/* Footer */}
       <footer className="bg-navy py-8 text-center">
-        <p className="font-body text-xs text-muted/40">
+        <p className="font-body text-xs text-on-navy/40">
           Guia de Identidade Visual | Tradupoints © {new Date().getFullYear()}
         </p>
       </footer>

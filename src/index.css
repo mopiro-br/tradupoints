@@ -43,6 +43,9 @@
     --navy-light: 220 25% 30%;
     --navy-dark: 220 35% 15%;
     --red-accent: 5 70% 55%;
+    /* Texto claro fixo para superfícies navy (não muda entre temas) */
+    --on-navy: 220 15% 94%;
+
 
     --sidebar-background: 220 30% 22%;
     --sidebar-foreground: 220 15% 92%;
@@ -69,14 +72,17 @@
     --secondary: 220 25% 20%;
     --secondary-foreground: 220 15% 92%;
     --muted: 220 25% 18%;
-    --muted-foreground: 220 10% 60%;
+    --muted-foreground: 220 12% 70%;
     --accent: 5 70% 55%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 220 25% 22%;
-    --input: 220 25% 22%;
+    --border: 220 25% 24%;
+    --input: 220 25% 24%;
     --ring: 42 80% 65%;
+    --navy: 220 32% 16%;
+    --navy-light: 220 28% 22%;
+    --navy-dark: 220 38% 11%;
     --sidebar-background: 220 35% 8%;
     --sidebar-foreground: 220 15% 92%;
     --sidebar-primary: 42 80% 65%;
@@ -86,15 +92,46 @@
     --sidebar-border: 220 30% 14%;
     --sidebar-ring: 42 80% 65%;
   }
+
+  /* Tema escuro nativo: evita a inversão automática do Chrome (Auto Dark Mode) */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 220 35% 10%;
+      --foreground: 220 15% 92%;
+      --card: 220 30% 14%;
+      --card-foreground: 220 15% 92%;
+      --popover: 220 30% 14%;
+      --popover-foreground: 220 15% 92%;
+      --primary: 42 80% 65%;
+      --primary-foreground: 220 30% 18%;
+      --secondary: 220 25% 20%;
+      --secondary-foreground: 220 15% 92%;
+      --muted: 220 25% 18%;
+      --muted-foreground: 220 12% 70%;
+      --accent: 5 70% 55%;
+      --accent-foreground: 0 0% 100%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 220 25% 24%;
+      --input: 220 25% 24%;
+      --ring: 42 80% 65%;
+      --navy: 220 32% 16%;
+      --navy-light: 220 28% 22%;
+      --navy-dark: 220 38% 11%;
+      --sidebar-background: 220 35% 8%;
+      --sidebar-accent: 220 30% 14%;
+      --sidebar-border: 220 30% 14%;
+    }
+  }
 }
 
 @layer base {
   :root {
-    color-scheme: only light;
+    color-scheme: light dark;
   }
 
   html {
-    color-scheme: only light;
+    color-scheme: light dark;
     background-color: hsl(var(--background));
   }
 
@@ -105,7 +142,6 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
-    color-scheme: only light;
   }
 
   h1, h2, h3, h4 {
@@ -152,22 +188,6 @@
   }
 }
 
-/* Proteções contra o modo escuro forçado do navegador (Chrome Auto Dark, extensões) */
-@media (prefers-color-scheme: dark) {
-  :root,
-  html,
-  body {
-    color-scheme: only light;
-  }
-
-  /* Texto com gradiente vira cor sólida para nunca ficar invisível */
-  .text-gradient-gold {
-    background-image: none !important;
-    color: hsl(var(--gold)) !important;
-    -webkit-text-fill-color: hsl(var(--gold)) !important;
-  }
-}
-
 @media (forced-colors: active) {
   .text-gradient-gold {
     background-image: none !important;
@@ -175,3 +195,4 @@
     -webkit-text-fill-color: CanvasText !important;
   }
 }
+
