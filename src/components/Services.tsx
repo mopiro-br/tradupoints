@@ -74,13 +74,14 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative bg-navy rounded-2xl p-10 md:p-14 mb-16 overflow-hidden group"
+          className="relative bg-navy rounded-2xl p-6 sm:p-10 md:p-14 mb-16 overflow-hidden group"
         >
           <div className="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-gold/5 rounded-full blur-2xl translate-y-1/3 -translate-x-1/3" />
           
           <div className="relative z-10 grid lg:grid-cols-2 gap-10 items-center">
-            <div>
+            <div className="min-w-0">
+
               <div className="inline-flex items-center gap-2 bg-red-accent/10 border border-red-accent/30 rounded-full px-4 py-1.5 mb-6">
                 <Languages className="w-4 h-4 text-red-accent" />
                 <span className="text-xs font-body text-red-accent tracking-widest uppercase font-medium">
@@ -103,16 +104,17 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                   "Simpósios, treinamentos internacionais e lançamentos",
                   "Glossários proprietários e preparo técnico dedicado",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-red-accent flex-shrink-0" />
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 mt-2 rounded-full bg-red-accent flex-shrink-0" />
                     <span className="font-body text-sm text-background/80">{item}</span>
                   </li>
                 ))}
               </ul>
-              <Button variant="gold" size="lg" className="text-base" onClick={onRequestQuote}>
+              <Button variant="gold" size="lg" className="text-base w-full sm:w-auto" onClick={onRequestQuote}>
                 Fale Com Nossa Equipe
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
+
             </div>
             <div className="hidden lg:flex items-center justify-center">
               <div className="relative">
@@ -136,7 +138,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative bg-card border border-border rounded-2xl p-8 md:p-12 mb-16 overflow-hidden hover:border-gold/30 transition-colors duration-300"
+          className="relative bg-card border border-border rounded-2xl p-6 sm:p-8 md:p-12 mb-16 overflow-hidden hover:border-gold/30 transition-colors duration-300"
         >
           <div className="absolute top-0 left-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl -translate-y-1/3 -translate-x-1/3" />
 
@@ -191,13 +193,13 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="group flex gap-4 p-6 rounded-xl border border-border bg-background hover:border-red-accent/50 transition-all duration-300"
+                  className="group flex flex-col sm:flex-row gap-4 p-6 rounded-xl border border-border bg-background hover:border-red-accent/50 transition-all duration-300"
                 >
                   <item.icon
                     className="w-8 h-8 flex-shrink-0 text-gold/70 group-hover:text-red-accent transition-colors duration-300"
                     strokeWidth={1.5}
                   />
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h4 className="font-display text-base font-semibold text-foreground mb-1.5">
                       {item.title}
                     </h4>
@@ -210,7 +212,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
             </div>
 
             <div className="mt-8">
-              <Button variant="gold-outline" size="lg" className="text-base" onClick={onRequestQuote}>
+              <Button variant="gold-outline" size="lg" className="text-base w-full sm:w-auto" onClick={onRequestQuote}>
                 Solicitar Proposta
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
@@ -224,7 +226,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative bg-card border border-border rounded-2xl p-8 md:p-12 mb-16 overflow-hidden hover:border-gold/30 transition-colors duration-300"
+          className="relative bg-card border border-border rounded-2xl p-6 sm:p-8 md:p-12 mb-16 overflow-hidden hover:border-gold/30 transition-colors duration-300"
         >
           <div className="absolute bottom-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl translate-y-1/3 translate-x-1/3" />
 
@@ -266,7 +268,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
             </div>
 
             <div className="mt-8">
-              <Button variant="gold-outline" size="lg" className="text-base" onClick={onRequestQuote}>
+              <Button variant="gold-outline" size="lg" className="text-base w-full sm:w-auto" onClick={onRequestQuote}>
                 Solicitar Proposta
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
@@ -280,12 +282,12 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative mt-16 bg-card border border-border rounded-2xl p-8 md:p-12 overflow-hidden group hover:border-gold/30 transition-colors duration-300"
+          className="relative mt-16 bg-card border border-border rounded-2xl p-6 sm:p-8 md:p-12 overflow-hidden group hover:border-gold/30 transition-colors duration-300"
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-red-accent/5 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3" />
 
           <div className="relative z-10 grid lg:grid-cols-[1fr_auto] gap-8 items-center">
-            <div>
+            <div className="min-w-0">
               <div className="inline-flex items-center gap-2 mb-4">
                 <GraduationCap className="w-5 h-5 text-red-accent" />
                 <span className="text-xs font-body text-red-accent tracking-widest uppercase font-medium">
@@ -309,7 +311,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
               </ul>
             </div>
             <div className="flex-shrink-0">
-              <Button variant="gold-outline" size="lg" className="text-base" asChild>
+              <Button variant="gold-outline" size="lg" className="text-base w-full sm:w-auto" asChild>
                 <a href={getWhatsAppUrl("Olá! Tenho interesse na mentoria para intérpretes de conferência.")} target="_blank" rel="noopener noreferrer">
                   Saiba Mais
                   <ArrowRight className="w-4 h-4 ml-1" />
