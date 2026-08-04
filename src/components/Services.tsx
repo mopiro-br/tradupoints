@@ -74,13 +74,14 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative bg-navy rounded-2xl p-10 md:p-14 mb-16 overflow-hidden group"
+          className="relative bg-navy rounded-2xl p-6 sm:p-10 md:p-14 mb-16 overflow-hidden group"
         >
           <div className="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-gold/5 rounded-full blur-2xl translate-y-1/3 -translate-x-1/3" />
           
           <div className="relative z-10 grid lg:grid-cols-2 gap-10 items-center">
-            <div>
+            <div className="min-w-0">
+
               <div className="inline-flex items-center gap-2 bg-red-accent/10 border border-red-accent/30 rounded-full px-4 py-1.5 mb-6">
                 <Languages className="w-4 h-4 text-red-accent" />
                 <span className="text-xs font-body text-red-accent tracking-widest uppercase font-medium">
@@ -103,16 +104,17 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                   "Simpósios, treinamentos internacionais e lançamentos",
                   "Glossários proprietários e preparo técnico dedicado",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-red-accent flex-shrink-0" />
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 mt-2 rounded-full bg-red-accent flex-shrink-0" />
                     <span className="font-body text-sm text-background/80">{item}</span>
                   </li>
                 ))}
               </ul>
-              <Button variant="gold" size="lg" className="text-base" onClick={onRequestQuote}>
+              <Button variant="gold" size="lg" className="text-base w-full sm:w-auto" onClick={onRequestQuote}>
                 Fale Com Nossa Equipe
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
+
             </div>
             <div className="hidden lg:flex items-center justify-center">
               <div className="relative">
