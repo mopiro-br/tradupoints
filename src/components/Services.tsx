@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Languages, FileText, Headphones, Music, Mic2, Radio, GraduationCap, Smartphone, ArrowRight, Sparkles, Captions, MonitorPlay, AudioLines, Building2 } from "lucide-react";
+import { Languages, FileText, Headphones, Music, Mic2, Radio, GraduationCap, Smartphone, ArrowRight, Sparkles, Captions, MonitorPlay, AudioLines } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/components/WhatsAppButton";
 
