@@ -228,7 +228,7 @@ const MentoriaAdmin = () => {
   if (loading) {
     return (
       <main className="min-h-screen bg-navy flex items-center justify-center">
-        <p className="text-muted/60 font-body">Carregando...</p>
+        <p className="text-on-navy/60 font-body">Carregando...</p>
       </main>
     );
   }
@@ -256,13 +256,13 @@ const MentoriaAdmin = () => {
             <span className="text-xs text-gold/60 font-body tracking-widest uppercase">Mentoria Admin</span>
           </div>
           <div className="flex items-center gap-3">
-            <Link to="/" className="text-xs text-muted/50 hover:text-gold transition-colors font-body hidden sm:inline-flex items-center gap-1">
+            <Link to="/" className="text-xs text-on-navy/50 hover:text-gold transition-colors font-body hidden sm:inline-flex items-center gap-1">
               <ArrowLeft className="w-3 h-3" /> Site
             </Link>
-            <Link to="/admin" className="text-xs text-muted/50 hover:text-gold transition-colors font-body hidden sm:inline-flex items-center gap-1">
+            <Link to="/admin" className="text-xs text-on-navy/50 hover:text-gold transition-colors font-body hidden sm:inline-flex items-center gap-1">
               Blog Admin
             </Link>
-            <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted/60 hover:text-gold">
+            <Button variant="ghost" size="sm" onClick={handleLogout} className="text-on-navy/60 hover:text-gold">
               <LogOut className="w-4 h-4 mr-1" /> Sair
             </Button>
           </div>

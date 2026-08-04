@@ -80,7 +80,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
                     href={linkHref}
                     onClick={handleAnchorClick(item.anchor)}
                     className={`text-sm font-body tracking-wide whitespace-nowrap transition-colors duration-300 ${
-                      active ? "text-gold" : "text-muted/80 hover:text-gold"
+                      active ? "text-gold" : "text-on-navy/80 hover:text-gold"
                     }`}
                   >
                     {item.label}
@@ -89,7 +89,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
                   <Link
                     to={item.href}
                     className={`text-sm font-body tracking-wide whitespace-nowrap transition-colors duration-300 ${
-                      active ? "text-gold" : "text-muted/80 hover:text-gold"
+                      active ? "text-gold" : "text-on-navy/80 hover:text-gold"
                     }`}
                   >
                     {item.label}
@@ -135,7 +135,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
                         href={linkHref}
                         onClick={handleAnchorClick(item.anchor)}
                         className={`text-sm font-body transition-colors ${
-                          active ? "text-gold" : "text-muted/80 hover:text-gold"
+                          active ? "text-gold" : "text-on-navy/80 hover:text-gold"
                         }`}
                       >
                         {item.label}
@@ -145,7 +145,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
                         to={item.href}
                         onClick={() => setOpen(false)}
                         className={`text-sm font-body transition-colors ${
-                          active ? "text-gold" : "text-muted/80 hover:text-gold"
+                          active ? "text-gold" : "text-on-navy/80 hover:text-gold"
                         }`}
                       >
                         {item.label}

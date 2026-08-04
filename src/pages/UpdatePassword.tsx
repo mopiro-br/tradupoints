@@ -75,7 +75,7 @@ const UpdatePassword = () => {
       <main className="min-h-screen bg-navy flex items-center justify-center px-6">
         <div className="text-center">
           <img src={logo} alt="Tradupoints" className="h-8 mx-auto mb-8" />
-          <p className="text-muted/60 font-body">Verificando sessão...</p>
+          <p className="text-on-navy/60 font-body">Verificando sessão...</p>
         </div>
       </main>
     );
@@ -86,13 +86,13 @@ const UpdatePassword = () => {
       <div className="w-full max-w-sm">
         <div className="text-center mb-10">
           <img src={logo} alt="Tradupoints" className="h-8 mx-auto mb-8" />
-          <h1 className="font-display text-2xl font-bold text-background">Nova Senha</h1>
-          <p className="font-body text-sm text-muted/60 mt-2">Digite sua nova senha abaixo</p>
+          <h1 className="font-display text-2xl font-bold text-on-navy">Nova Senha</h1>
+          <p className="font-body text-sm text-on-navy/60 mt-2">Digite sua nova senha abaixo</p>
         </div>
 
         <form onSubmit={handleUpdate} className="space-y-5">
           <div>
-            <Label htmlFor="password" className="text-muted/80 font-body text-sm">Nova senha</Label>
+            <Label htmlFor="password" className="text-on-navy/80 font-body text-sm">Nova senha</Label>
             <Input
               id="password"
               type="password"
@@ -100,11 +100,11 @@ const UpdatePassword = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
               minLength={6}
-              className="mt-1 bg-navy-light border-gold/20 text-background"
+              className="mt-1 bg-navy-light border-gold/20 text-on-navy"
             />
           </div>
           <div>
-            <Label htmlFor="confirmPassword" className="text-muted/80 font-body text-sm">Confirmar nova senha</Label>
+            <Label htmlFor="confirmPassword" className="text-on-navy/80 font-body text-sm">Confirmar nova senha</Label>
             <Input
               id="confirmPassword"
               type="password"
@@ -112,7 +112,7 @@ const UpdatePassword = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
               minLength={6}
-              className="mt-1 bg-navy-light border-gold/20 text-background"
+              className="mt-1 bg-navy-light border-gold/20 text-on-navy"
             />
           </div>
           <Button type="submit" variant="gold" className="w-full" disabled={loading}>

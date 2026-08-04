@@ -88,10 +88,10 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                   Especialidade
                 </span>
               </div>
-              <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-background mb-4 leading-tight">
+              <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-on-navy mb-4 leading-tight">
                 Tradução Simultânea Premium
               </h3>
-              <p className="font-body text-muted/70 leading-relaxed mb-6 max-w-lg">
+              <p className="font-body text-on-navy/70 leading-relaxed mb-6 max-w-lg">
                 Não apenas traduzimos palavras: facilitamos diálogos estratégicos,
                 conectamos pessoas e ideias, transformando complexidade em clareza
                 e confiança. Preparação meticulosa com estudo prévio de conteúdos
@@ -106,7 +106,7 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 mt-2 rounded-full bg-red-accent flex-shrink-0" />
-                    <span className="font-body text-sm text-background/80">{item}</span>
+                    <span className="font-body text-sm text-on-navy/80">{item}</span>
                   </li>
                 ))}
               </ul>

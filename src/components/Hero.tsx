@@ -33,7 +33,7 @@ const Hero = ({ onRequestQuote }: HeroProps) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-background leading-tight mb-6"
+            className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-on-navy leading-tight mb-6"
           >
             Tradução simultânea{" "}
             <span className="text-gradient-gold">técnica e estratégica</span>
@@ -43,7 +43,7 @@ const Hero = ({ onRequestQuote }: HeroProps) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-muted/70 font-body font-light max-w-2xl mb-10 leading-relaxed"
+            className="text-lg md:text-xl text-on-navy/70 font-body font-light max-w-2xl mb-10 leading-relaxed"
           >
             Transformamos desafios multilíngues em comunicação clara, precisa e contextualizada.&nbsp;
           </motion.p>

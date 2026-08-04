@@ -44,11 +44,11 @@ const Cursos = () => {
             <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-4">
               Aprimoramento Profissional
             </p>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-6">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-navy mb-6">
               Cursos para{" "}
               <span className="text-gradient-gold">intérpretes</span>
             </h1>
-            <p className="font-body text-muted/60 text-lg leading-relaxed">
+            <p className="font-body text-on-navy/60 text-lg leading-relaxed">
               Capacitação prática e estratégica para intérpretes que desejam se
               destacar no mercado com ferramentas modernas e gestão profissional.
             </p>
