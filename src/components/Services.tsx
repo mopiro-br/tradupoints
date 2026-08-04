@@ -247,10 +247,10 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="group flex gap-5 p-6 rounded-xl border border-border bg-background hover:border-red-accent/50 transition-all duration-300"
+                  className="group flex flex-col md:flex-row gap-4 md:gap-5 p-6 rounded-xl border border-border bg-background hover:border-red-accent/50 transition-all duration-300"
                 >
                   <item.icon
-                    className="w-8 h-8 flex-shrink-0 text-gold/70 group-hover:text-red-accent transition-colors duration-300"
+                    className="w-8 h-8 flex-shrink-0 text-gold/70 group-hover:text-red-accent transition-colors duration-300 mb-2 md:mb-0"
                     strokeWidth={1.5}
                   />
                   <div className="flex-1 min-w-0">
