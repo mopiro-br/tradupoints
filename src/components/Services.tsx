@@ -229,17 +229,11 @@ const Services = ({ onRequestQuote }: ServicesProps) => {
           <div className="absolute bottom-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl translate-y-1/3 translate-x-1/3" />
 
           <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 mb-4">
-              <Building2 className="w-5 h-5 text-red-accent" />
-              <span className="text-xs font-body text-red-accent tracking-widest uppercase font-medium">
-                Soluções Complementares
-              </span>
-            </div>
             <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 leading-tight">
-              Serviços que integram seu evento
+              Outras soluções para empresas e eventos
             </h3>
             <p className="font-body text-muted-foreground leading-relaxed max-w-3xl mb-8">
-              Serviços que completam a experiência multilingual do seu evento,
+              Serviços que completam a experiência multilíngue do seu evento,
               desde a preparação de materiais até a sonorização e condução do palco.
               Tudo integrado para que você tenha apenas um ponto de contato.
             </p>
