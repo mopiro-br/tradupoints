@@ -4,27 +4,27 @@ import { Shield, Award, Clock, Users } from "lucide-react";
 const items = [
   {
     icon: Shield,
-    title: "Confidencialidade Absoluta",
+    title: "Confidencialidade absoluta",
     description:
-      "Proteção total de informações sensíveis. Sua marca e seus dados tratados com o máximo sigilo e discrição profissional.",
+      "Sua marca e seus dados sensíveis são tratados com sigilo profissional, do primeiro contato à entrega final.",
   },
   {
     icon: Award,
-    title: "Expertise Técnica Profunda",
+    title: "Expertise técnica profunda",
     description:
-      "Domínio da terminologia médica, científica e técnica nos mais altos níveis de exigência. Preparação meticulosa com glossários personalizados.",
+      "Domínio sólido da terminologia médica, científica e técnica, com glossários personalizados para cada evento.",
   },
   {
     icon: Clock,
-    title: "Execução Impecável",
+    title: "Execução impecável",
     description:
-      "Planejamento milimétrico e infraestrutura redundante. Antecipamos necessidades e resolvemos antes que se tornem desafios.",
+      "Planejamento milimétrico e infraestrutura redundante para antecipar necessidades e resolver antes de virarem desafios.",
   },
   {
     icon: Users,
-    title: "Parceria Estratégica",
+    title: "Parceria estratégica",
     description:
-      "Atuamos como extensão da sua equipe, compreendendo o contexto do evento e facilitando seu foco no conteúdo e na experiência.",
+      "Atuamos como extensão da sua equipe, alinhando linguagem e contexto para que você foque no evento.",
   },
 ];
 
@@ -36,7 +36,7 @@ const Differentials = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="w-8 h-0.5 bg-red-accent inline-block" />
@@ -51,7 +51,7 @@ const Differentials = () => {
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {items.map((item, i) => (
             <motion.div
               key={item.title}
@@ -59,17 +59,19 @@ const Differentials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="text-center group"
+              className="group relative flex items-start gap-5 md:block md:text-center p-5 md:p-6 rounded-xl border border-gold/10 bg-background/5 backdrop-blur-sm hover:bg-background/10 hover:border-gold/30 transition-all duration-300"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-gold/30 flex items-center justify-center group-hover:bg-red-accent/10 transition-colors duration-300">
-                <item.icon className="w-7 h-7 text-gold group-hover:text-red-accent transition-colors duration-300" strokeWidth={1.5} />
+              <div className="shrink-0 w-12 h-12 md:w-16 md:h-16 md:mx-auto md:mb-6 rounded-full border border-gold/30 flex items-center justify-center group-hover:bg-red-accent/10 transition-colors duration-300">
+                <item.icon className="w-6 h-6 md:w-7 md:h-7 text-gold group-hover:text-red-accent transition-colors duration-300" strokeWidth={1.5} />
               </div>
-              <h3 className="font-display text-lg font-semibold text-background mb-3">
-                {item.title}
-              </h3>
-              <p className="font-body text-sm text-muted/60 leading-relaxed">
-                {item.description}
-              </p>
+              <div className="min-w-0">
+                <h3 className="font-display text-lg font-semibold text-background mb-2 md:mb-3">
+                  {item.title}
+                </h3>
+                <p className="font-body text-sm md:text-base text-background/80 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
