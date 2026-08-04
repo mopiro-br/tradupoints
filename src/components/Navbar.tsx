@@ -78,7 +78,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
                   <a
                     href={linkHref}
                     onClick={handleAnchorClick(item.anchor)}
-                    className={`text-sm font-body tracking-wide transition-colors duration-300 ${
+                    className={`text-sm font-body tracking-wide whitespace-nowrap transition-colors duration-300 ${
                       active ? "text-gold" : "text-muted/80 hover:text-gold"
                     }`}
                   >
@@ -87,7 +87,7 @@ const Navbar = ({ onRequestQuote }: NavbarProps) => {
                 ) : (
                   <Link
                     to={item.href}
-                    className={`text-sm font-body tracking-wide transition-colors duration-300 ${
+                    className={`text-sm font-body tracking-wide whitespace-nowrap transition-colors duration-300 ${
                       active ? "text-gold" : "text-muted/80 hover:text-gold"
                     }`}
                   >
